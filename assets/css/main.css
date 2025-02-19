@@ -1,0 +1,1558 @@
+/* Table of Contents
+----------------------------------
+
+0- Global CSS
+1- Heading CSS
+2- Button CSS
+3- Header Area CSS
+4- Home Area CSS
+5- About Area CSS
+6- Qualification Area CSS
+7- Services Area CSS
+8- Portfolio Area CSS
+9- Testimonials Area CSS
+10- Blog Area CSS
+11- Contact Area CSS
+12- Footer Area CSS
+13- Scroll-Top Area CSS
+
+*/
+
+/*--------------------- 0- Global CSS (Start) ---------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root{
+    --green: #089D66;
+    --teal: #00d084;
+    --black: #000000;
+    --white: #F7F5F2;
+    --grey: #E2E2E2;
+    --dark-grey: #7A7B7B;
+    --gray-background: #242424;
+}
+
+/* Modo oscuro */
+
+*{
+    font-family: 'Roboto', sans-serif;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-transform: capitalize;
+    outline: none;
+    -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+           -o-transition: all 0.2s linear;
+                transition: all 0.2s linear;
+}
+
+*::selection{
+    color: var(--white);
+    background-color: var(--green);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body{
+    background-color: var(--white);
+}
+/* Modo oscuro */
+body.dark-mode{
+    background-color: var(--black);
+}
+
+section{
+    padding: 2rem 5%;
+}
+
+::-webkit-scrollbar{
+    width: 0.8rem;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 1rem;
+    background-color: var(--green);
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--white);
+}
+
+.swiper-pagination-bullet{
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50rem;
+    background-color: var(--green);
+}
+
+.swiper-pagination-bullet-active{
+    width: 3rem;
+    background: var(--green);
+}
+
+/*--------------------- 0- Global CSS (End) ---------------------*/
+
+
+
+/*--------------------- 1- Heading CSS (Start) ---------------------*/
+.heading{
+    margin-bottom: 2rem;
+}
+
+.heading h2{
+    text-align: center;
+    padding-bottom: 2rem;
+    color: var(--green);
+    font-size: 4rem;
+}
+
+.heading h2 span{
+    position: relative;
+    z-index: 0;
+    color: var(--black);
+}
+
+body.dark-mode .heading h2 span{
+    color: var(--white);
+}
+
+.heading h2 span::before{
+    content: '';
+    position: absolute;
+    bottom: -0.5rem; left: 0;
+    z-index: -1;
+    background: var(--green);
+    height: 0.2rem;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.navbar{
+    border-right-style: solid;
+    border-right-width: 0px;
+    padding-right: 140px;
+}
+
+/*--------------------- 1- Heading CSS (End) ---------------------*/
+
+
+
+/*--------------------- 2- Button CSS (Start) ---------------------*/
+.btn{
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    color: var(--green);
+    background-color: transparent;
+    border: 0.2rem solid var(--green);
+}
+
+.btn i{
+    padding-left: 1rem;
+}
+
+.btn:hover{
+    color: var(--white);
+    background-color:  var(--teal);
+    cursor: pointer;
+    border: 0.2rem solid var(--teal);
+}
+/*--------------------- 2- Button CSS (End) ---------------------*/
+
+
+
+/*--------------------- 3- Header Area CSS (Start) ---------------------*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: transparent;
+    -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+    z-index: 999;
+}
+
+.header.sticky{
+    border-bottom: 0.1rem solid var(--black);
+    background-color: var(--white);
+    backdrop-filter: blur(1.5rem);
+}
+
+body.dark-mode .header.sticky {
+    border-bottom: 0.1rem solid var(--white);
+    background-color: var(--black);
+    backdrop-filter: blur(1.5rem);
+}
+
+.header .logo img{
+    height: 5rem;
+}
+
+.logo-dark {
+    display: none;
+}
+
+body.dark-mode .logo-light {
+    display: none;
+}
+
+body.dark-mode .logo-dark {
+    display: block;
+}
+
+header .navbar a{
+    color: var(--black);
+    font-size: 1.8rem;
+    margin-left: 1rem;
+}
+
+body.dark-mode .navbar a{
+    color: var(--white);
+}
+
+header .navbar a:hover,
+header .navbar a.active{
+    color: var(--green);
+}
+
+header #menu-btn{
+    font-size: 3rem;
+    color: var(--black);
+    cursor: pointer;
+    -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+    display: none;
+}
+
+header .fa-times{
+    -webkit-transform: rotate(180deg);
+             transform: rotate(180deg);
+}
+
+header #menu-btn:hover{
+    color: var(--green);
+}
+
+body.dark-mode header #menu-btn:hover {
+    color: var(--teal);
+}
+
+/*--------------------- 3- Header Area CSS (End) ---------------------*/
+
+/*--------------------- Dark - Light mode (Start) ---------------------*/
+.toggle {
+    background-color: var(--white);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 50px 20px rgba(0, 0, 0, .1);
+    line-height: 1;
+}
+
+.input {
+    display: none;
+}
+
+.icon {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    transition: transform 500ms;
+}
+
+.icon--moon {
+    transition-delay: 200ms;
+}
+
+.icon--sun {
+    transform: scale(0);
+}
+
+#switch:checked + .icon--moon {
+    transform: rotate(360deg) scale(0);
+}
+
+#switch:checked ~ .icon--sun {
+    transition-delay: 200ms;
+    transform: scale(1) rotate(360deg);
+}
+/*--------------------- Dark - Light mode (Start) ---------------------*/
+
+/*--------------------- SideBar Area (Start) ---------------------*/
+#sidebar {
+    position: fixed;
+    left: 0;
+    width: 70px;
+    height: 100vh;
+    background-color: transparent;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.follow-me {
+    writing-mode: vertical-rl;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    color: var(--black);
+    font-size: 1.5rem;
+}
+
+.follow-me p {
+    margin: 0;
+    font-size: 2rem;
+}
+
+body.dark-mode .follow-me p {
+    color: var(--white);
+}
+
+.separator {
+    display: flex;
+    height: 7.5rem;
+    background-color: var(--black);
+    margin: 30px 10px 10px 10px;
+    align-items: flex-start;
+}
+
+#sidebar a {
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+#sidebar i {
+    color: var(--black);
+    font-size: 2rem;
+}
+
+body.dark-mode #sidebar i {
+    color: var(--white);
+}
+
+#sidebar a:hover i {
+    color: var(--teal);
+    transform: scale(1.2);
+}
+/*--------------------- SideBar Area (End) ---------------------*/
+
+
+
+/*--------------------- 4- Home Area CSS (Start) ---------------------*/
+.home{
+    padding: 0rem 5%;
+    min-height: 100vh;
+}
+
+.home .box-container{
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.home. image{
+    text-align: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 40rem;
+            flex:  1 1 40rem;
+}
+
+.home .image img{
+    border-radius: 70% 70% 70% 70% / 30% 30% 70% 70% ;
+    object-fit: cover;
+    position: absolute;
+    height: 450px;
+    width: 450px;
+    background-size: cover;
+    margin: 4.5rem;
+}
+
+.home .content{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40rem;
+        flex: 1 1 40rem;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    margin-top: 7rem;
+}
+
+.home .content h2{
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--green);
+}
+
+.home .content h1{
+    font-size: 4rem;
+    color: var(--black);
+    padding: 1rem 0;
+    text-transform: none;
+}
+
+body.dark-mode .home .content h1 {
+    color: var(--white);
+}
+
+.home .content h1 span{
+    color: var(--green);
+}
+
+.home .content p{
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--black);
+    padding-bottom: 2rem;
+    line-height: 1.5;
+}
+
+body.dark-mode .home .content p {
+    color: var(--white);
+}
+
+/*---------------  CIRCLE ANIMATION (START)  ---------------*/
+.animation-circle{
+    position: relative;
+}
+
+.profile{
+    top: 100px;
+    height: 550px;
+    width: 550px;
+    background-size: cover;
+}
+
+.circle {
+    position: relative;
+    top: 350px;
+    left: 220px;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    animation: animationCircle 40s linear infinite;
+}
+
+.background-circle{
+    background: var(--grey);
+    border-radius: 50%;
+    width: 450px;
+    height: 450px;
+    z-index: 9;
+    box-shadow: 0 0 20px var(--black);
+    margin-left: 4.5rem;
+    margin-top: -4rem;
+}
+
+body.dark-mode .background-circle {
+    background: var(--gray-background);
+    box-shadow: 0 0 20px var(--teal);
+}
+
+.circle span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* Icons color Circle*/
+    box-shadow: 0 0 10px var(--black);
+    border-radius: 50%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * calc(-360deg / 19))) translateZ(310px); /* Icons Numbers*/
+}
+
+body.dark-mode .circle span {
+    background-color: rgba(36, 36, 36, 0.7);
+}
+
+.circle span img {
+    position: relative;
+    top: 12px;
+    left: 12px;
+    object-fit: cover;
+}
+
+@keyframes animationCircle {
+    0% {
+        transform: perspective(1000px) rotateY(0deg) rotateX(15deg)
+        translateY(-30px);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg) rotateX(15deg)
+        translateY(-30px);
+    }
+}
+
+/*---------------  CIRCLE ANIMATION (END)  ---------------*/
+/*--------------------- 4- Home Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 5- About Area CSS (Start) ---------------------*/
+.about .box-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.about .image{
+    width: 32rem;
+    text-align: center;
+}
+
+.about .image img{
+    width: 100%;
+    border: 1rem solid var(--green);
+}
+
+.about .content{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 55rem;
+    flex: 1 1 55rem;
+}
+
+.about .content h2{
+    font-size: 3rem;
+    color: var(--black);
+    padding-bottom: 1rem;
+}
+
+body.dark-mode .about .content h2{
+    color: var(--white);
+}
+
+.about .content > p{
+    font-size: 1.6rem;
+    color: var(--black);
+    line-height: 1.6;
+    padding-bottom: 1rem;
+}
+
+body.dark-mode .about .content p {
+    color: var(--white);
+}
+
+.about .content .about-info{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.about .content .about-info .info{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 15rem;
+    flex: 1 1 15rem;
+}
+
+.about .content .about-info .info h4{
+    font-size: 1.6rem;
+    color: var(--black);
+    padding-bottom: 1rem;
+}
+
+body.dark-mode .about .content .about-info .info h4 {
+    color: var(--white);
+}
+
+.about .content .about-info .info span{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--black);
+}
+
+body.dark-mode .about .content .about-info .info span{
+    color: var(--white);
+}
+
+.about .content .about-info .info .btn{
+    margin-top: 1rem;
+}
+
+.counting{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 35rem;
+    flex: 1 1 35rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.counting .box{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 18rem;
+    flex: 1 1 18rem;
+    text-align: center;
+    background-color: var(--grey);
+    padding: 2rem;
+}
+
+body.dark-mode .counting .box {
+    background-color: var(--gray-background);
+}
+
+.counting .box .count{
+    font-size: 3.5rem;
+    color: var(--green);
+    padding-bottom: 0.5rem;
+}
+
+body.dark-mode .box .count {
+    color: var(--teal);
+}
+
+.counting .box h3{
+    font-size: 1.8rem;
+    color: var(--black);
+}
+
+body.dark-mode .counting .box h3 {
+    color: var(--white);
+}
+
+.skill-container{
+    padding: 2rem 0;
+}
+
+.skills{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.skill-item{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 30rem;
+    flex: 1 1 30rem;
+    margin-right: 1.5rem;
+}
+
+.skill-item .box{
+    padding:1rem 0;
+}
+
+.skill-item .box h3{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding:.7rem 0;
+    font-size: 1.7rem;
+    color: var(--black);
+    font-weight: 400;
+}
+
+body.dark-mode .skill-item .box h3 {
+    color: var(--white);
+}
+
+.skill-item .box .progress-bar{
+    width:100%;
+    background:var(--grey);
+    overflow:hidden;
+    height:1rem;
+    border-radius: 50rem;
+}
+
+body.dark-mode .skill-item .box .progress-bar {
+    background:var(--gray-background);
+}
+
+.skill-item .box .progress-bar span{
+    display:block;
+    height:100%;
+    background: var(--green);
+}
+
+.skill-item.item1 .box:nth-child(1) .progress-bar span{
+    width:90%;
+}
+
+.skill-item.item1 .box:nth-child(2) .progress-bar span{
+    width:80%;
+}
+
+.skill-item.item1 .box:nth-child(3) .progress-bar span{
+    width:85%;
+}
+
+.skill-item.item2 .box:nth-child(1) .progress-bar span{
+    width:75%;
+}
+
+.skill-item.item2 .box:nth-child(2) .progress-bar span{
+    width:65%;
+}
+
+.skill-item.item2 .box:nth-child(3) .progress-bar span{
+    width:60%;
+}
+
+/*--------------------- 5- About Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 6- Qualification Area CSS (Start) ---------------------*/
+.qualification .box-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.education, .experience{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40rem;
+        flex: 1 1 40rem;
+}
+
+.experience-item{
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40rem;
+        flex: 1 1 40rem;
+    padding: 0 3rem 2rem 3rem;
+    border-left: 0.2rem solid var(--green);
+    margin-left: 2rem;
+}
+
+.experience-item i{
+    position: absolute;
+    top: 0;
+    left: -2.5rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--black);
+    background: var(--green);
+}
+
+.experience-item .content{
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    border-left: 2rem;
+}
+
+.experience-item span{
+    background: var(--grey);
+    color: var(--black);
+    padding: 0.5rem 1.5rem;
+    font-size: 1.8rem;
+    border-radius: 50rem;
+}
+
+body.dark-mode .experience-item span {
+    background: var(--gray-background);
+    color: var(--white);
+}
+
+.experience-item h3{
+    font-size: 3.5rem;
+    color: var(--black);
+    padding: 2rem 0;
+}
+
+body.dark-mode .experience-item h3 {
+    color: var(--white);
+}
+
+.experience-item p{
+    color: var(--black);
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+}
+
+body.dark-mode .experience-item p {
+    color: var(--white);
+}
+/*--------------------- 6- Qualification Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 7- Services Area CSS (Start) ---------------------*/
+.service .box-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.service-item{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 35rem;
+        flex: 1 1 35rem;
+    background-color: var(--grey);
+    padding: 4rem 3rem;
+    text-align: center;
+    border: 0.1rem solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.5rem;
+    -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+            -o-transition: all 0.5s linear;
+                transition: all 0.5s linear;
+}
+
+body.dark-mode .service-item {
+    background-color: var(--black);
+}
+
+.service-item:hover{
+    background-color: var(--green);
+}
+
+body.dark-mode .service-item:hover {
+    background-color: var(--green);
+}
+
+.service-item i{
+    color: var(--black);
+    font-size: 4rem;
+}
+
+body.dark-mode .service-item i {
+    color: var(--white);
+}
+
+.service-item h3{
+    font-size: 2rem;
+    color: var(--black);
+    padding: 1.5rem 0;
+}
+
+body.dark-mode .service-item h3 {
+    color: var(--white);
+}
+
+.service-item p{
+    font-size: 1.6rem;
+    color: var(--black);
+    line-height: 1.6;
+}
+
+body.dark-mode .service-item p {
+    color: var(--white);
+}
+
+.service-item:hover i{
+    color: var(--black);
+}
+
+.service-item:hover h3{
+    color: var(--grey);
+}
+
+.service-item:hover p{
+    color: var(--white);
+}
+
+/*--------------------- 7- Services Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 8- Portfolio Area CSS (Start) ---------------------*/
+.controls{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin-top: 2rem;
+}
+
+.controls .button{
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+.controls .button.active{
+    cursor: pointer;
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.portfolio .box-container{
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(33rem, 1fr));
+    gap: 0.5rem;
+    padding: 2rem 0;
+}
+
+.portfolio-item{
+    border-radius: 0.5rem;
+    height: 25rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.portfolio-item img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.portfolio-item .content{
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 80%;
+    width: 80%;
+    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--green);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transform: scale(0) ;
+            transform: scale(0);
+}
+
+.portfolio-item .content h4{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--green);
+    transform-origin: top;
+    -webkit-transform: translateY(-10rem);
+            transform: translateY(-10rem);
+    opacity: 0;
+    padding-bottom: 1rem;
+    -webkit-transition: all 0.4s linear;
+        -moz-transition: all 0.4s linear;
+            -o-transition: all 0.4s linear;
+                transition: all 0.4s linear;
+}
+
+.portfolio-item .content p{
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--white);
+    transform-origin: top;
+    -webkit-transform: translateY(-10rem);
+            transform: translateY(-10rem);
+    opacity: 0;
+    -webkit-transition: all 0.4s linear;
+        -moz-transition: all 0.4s linear;
+            -o-transition: all 0.4s linear;
+                transition: all 0.4s linear;
+}
+
+.portfolio-item .content .view-btn{
+    font-size: 2rem;
+    color: var(--green);
+    transform-origin: top;
+    -webkit-transform: translateY(-10rem);
+            transform: translateY(-10rem);
+    opacity: 0;
+    -webkit-transition: all 0.4s linear;
+        -moz-transition: all 0.4s linear;
+            -o-transition: all 0.4s linear;
+                transition: all 0.4s linear;
+    border-radius: 5rem;
+    margin-top: 1.5rem;
+}
+
+.portfolio-item:hover .content{
+    -webkit-transform: scale(1);
+            transform: scale(1);
+}
+
+.portfolio-item:hover .content h4{
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+}
+
+.portfolio-item:hover .content p{
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+}
+
+.portfolio-item:hover .content .view-btn{
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+}
+
+.portfolio-item:hover img{
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+}
+
+/*CSS3 Animation Effects for Magnific Popup*/
+
+/* start state */
+.mfp-newspaper .mfp-with-anim{
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
+    -webkit-transform: scale(0) rotate(500deg);
+    transform: scale(0) rotate(500deg);
+}
+.mfp-newspaper.mfp-bg {
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+/* animate in */
+.mfp-newspaper.mfp-ready .mfp-with-anim {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
+}
+.mfp-newspaper.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+/* animate out */
+.mfp-newspaper.mfp-removing .mfp-with-anim {
+    -webkit-transform: scale(0) rotate(500deg);
+    transform: scale(0) rotate(500deg);
+    opacity: 0;
+}
+.mfp-newspaper.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+/*--------------------- 8- Portfolio Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 9- Testimonials Area CSS (Start) ---------------------*/
+.testimonial-slider{
+    position: relative;
+    padding-bottom: 4rem;
+    overflow: hidden;
+}
+
+.testi-item{
+    text-align: center;
+    border: 0.1rem solid var(--dark-grey);
+    border-radius: 0.5rem;
+    padding: 4rem 2rem;
+}
+
+.testi-item:hover{
+    border-color: var(--green);
+}
+
+.testi-item img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    border: 0.5rem solid var(--black);
+}
+
+body.dark-mode .testi-item img {
+    border: 0.5rem solid var(--white);
+}
+
+.testi-item .fa-quote-left{
+    display: block;
+    font-size: 3rem;
+    color: var(--black);
+    margin: 1rem 0;
+}
+
+.testi-item p{
+    color: var(--dark-grey);
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+body.dark-mode .testi-item p {
+    color: var(--white);
+}
+
+.testi-item .intro{
+    margin: 1rem 0;
+}
+
+.testi-item .intro h3{
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: 0.5rem;
+}
+
+body.dark-mode .testi-item .intro h3 {
+    color: var(--white);
+}
+
+.testi-item .intro h5{
+    color: var(--green);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+/*--------------------- 9- Testimonials Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 10- Blog Area CSS (Start) ---------------------*/
+.blog-slider{
+    position: relative;
+    padding-bottom: 4rem;
+    overflow: hidden;
+}
+
+.blog-item{
+    background-color: var(--grey);
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.blog-item .image{
+    height: 35rem;
+    overflow: hidden;
+}
+
+.blog-item:hover .image img{
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+}
+
+.blog-item .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blog-item .content{
+    padding: 2rem 1rem;
+}
+
+body.dark-mode .blog-item .content {
+    background-color: var(--gray-background);
+}
+
+.blog-item .content .intro{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 0.2rem solid var(--grey);
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+}
+
+.blog-item .content .intro h5{
+    font-size: 1.5rem;
+}
+
+.blog-item .content .intro h5 i{
+    color: var(--green);
+    padding-right: 0.5rem;
+}
+
+.blog-item .content .intro h5 span{
+    color: var(--black);
+}
+
+body.dark-mode .blog-item .content .intro h5 span {
+    color: var(--white);
+}
+
+.blog-item .content .main-heading{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--black);
+}
+
+body.dark-mode .blog-item .content .main-heading{
+    color: var(--white);
+}
+
+.blog-item p{
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: var(--black);
+}
+
+body.dark-mode .blog-item p {
+    color: var(--white);
+}
+
+.blog-item .btn{
+    margin-top: 1rem;
+}
+/*--------------------- 10- Blog Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 11- Contact Area CSS (Start) ---------------------*/
+.contact .alert{
+    font-size: 2rem;
+    color: var(--green);
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+}
+
+.contact .box-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact-info{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 42rem;
+    flex: 1 1 42rem;
+}
+
+.contact-info h3{
+    font-size: 3rem;
+    color: var(--black);
+}
+
+body.dark-mode .contact-info h3{
+    color: var(--white);
+}
+
+.contact-info > p{
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0.5rem 0;
+}
+
+body.dark-mode .contact-info > p{
+    color: var(--white);
+}
+
+.contact-info .info-item{
+    padding: 1rem 0;
+}
+
+.contact-info .info-item .gmail,
+.contact-info .info-item .linkedin,
+.contact-info .info-item .github{
+    text-transform: none;
+}
+
+.contact-info .info-item h4{
+    font-size: 1.8rem;
+    color: var(--black);
+}
+
+body.dark-mode .contact-info h4{
+    color: var(--white);
+}
+
+.contact-info .info-item .detail{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.contact-info .info-item .detail .fas,
+.contact-info .info-item .detail .fab{
+    border-radius: 50%;
+    color: var(--green);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.contact-info .info-item .detail p{
+    font-size: 1.6rem;
+    color: var(--black);
+    line-height: 1.6;
+    padding-left: 1rem;
+}
+
+body.dark-mode .contact-info .info-item .detail p {
+    color: var(--white);
+}
+
+.contact-form{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 42rem;
+    flex: 1 1 42rem;
+}
+
+.contact-form .box{
+    width: 100%;
+    text-transform: none;
+    color: var(--black);
+    font-size: 1.6rem;
+    border: 0.1rem solid var(--grey);
+    padding: 1.5rem;
+    margin: 0.5rem 0;
+    background-color: var(--grey);
+    border-bottom-width: unset;
+}
+
+body.dark-mode .contact-form .box {
+    color: var(--white);
+    border: 0.1rem solid var(--black);
+    background-color: var(--gray-background);
+}
+
+.contact-form .box:focus{
+    border-color: var(--black);
+}
+
+body.dark-mode .contact-form .box:focus {
+    border-color: var(--white) ;
+}
+
+.contact-form .box::placeholder{
+    color: var(--black);
+}
+
+body.dark-mode .contact-form .box::placeholder {
+    color: var(--white);
+}
+
+.contact-form textarea{
+    height: 15rem;
+    resize: none;
+}
+
+.contact-form .btn{
+    margin-top: 1rem;
+}
+
+/*--------------------- 11- Contact Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 12- Footer Area CSS (Start) ---------------------*/
+footer{
+    background-color: var(--green);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer .social{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+footer .social .fab{
+    background-color: var(--black);
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    color: var(--white);
+    font-size: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 0.5rem;
+}
+
+footer .social .fab:hover{
+    color: var(--black);
+    background-color: var(--white);
+}
+
+footer .content p{
+    font-size: 2rem;
+    color: var(--white);
+}
+
+footer .content p span{
+    color: var(--black);
+}
+
+/*--------------------- 12- Footer Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 13- Scroll-Top (Start) ---------------------*/
+.scroll-top{
+    position: fixed;
+    bottom: 1rem;
+    right:1rem;
+    height: 5rem;
+    width: 5rem;
+    font-size: 3rem;
+    font-weight:lighter;
+    background: var(--black);
+    color: var(--white);
+    border: 0.2rem solid var(--white);
+    border-radius: 50%;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    z-index: 999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.scroll-top:hover{
+    background: var(--white);
+    color:var(--black);
+}
+
+/*--------------------- 13- Scroll-Top (End) ---------------------*/
+
+/*--------------------- Portfolio-specific styles ----------------*/
+
+.blog-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.blog-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
