@@ -1546,13 +1546,40 @@ footer .content p span{
 .blog-content {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
     line-height: 1.6;
     font-size: 18px;
+    padding-top: 9rem;
 }
 
 .blog-content img {
     max-width: 100%;
     height: auto;
     margin: 20px 0;
+}
+
+.blog-content h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.blog-content p {
+    font-size: 1.6rem;
+    color: var(--black);
+    line-height: 1.6;
+    padding-left: 1rem;
+}
+
+.info-blog {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.blog-tag {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.fa-solid,
+.fa-regular {
+    display: flex;
 }
