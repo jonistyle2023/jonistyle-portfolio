@@ -537,7 +537,7 @@ body.dark-mode .circle span {
 
 /*--------------------- 5- About Area CSS (Start) ---------------------*/
 .about{
-    background-image: url("assets/images/Backgrounds/Light/resume.svg");
+    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/Light/resume.svg");
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
