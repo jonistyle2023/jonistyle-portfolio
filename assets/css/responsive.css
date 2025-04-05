@@ -167,3 +167,156 @@
 }
 /*---------------  Profile Photo (End) ---------------*/
 /*--------------------- Responsive (End) ---------------------*/
+
+/*--------------------- Responsive backgrounds (resume) ---------------------*/
+
+@media (max-width: 800px) {
+    .about {
+        background-size: contain;
+        background-position: center top;
+        background-repeat: repeat;
+        min-height: 250px;
+        padding: 3rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about {
+        background-size: 100% auto;
+        background-position: center top;
+        background-repeat: repeat;
+        min-height: 200px;
+        padding: 2rem 1rem;
+    }
+}
+
+/*--------------------- Responsive backgrounds (qualifications) ---------------------*/
+@media (max-width: 800px) {
+    .qualification {
+        background-size: contain;
+        background-position: center top;
+        background-repeat: repeat;
+        min-height: 250px;
+        padding: 3rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .qualification {
+        background-size: 100% auto;
+        background-position: center top;
+        background-repeat: repeat;
+        min-height: 200px;
+        padding: 2rem 1rem;
+    }
+}
+
+/*--------------------- Responsive backgrounds (services) ---------------------*/
+
+@media (max-width: 800px) {
+    .service {
+        background-size: contain;
+        background-position: center top;
+        background-repeat: repeat;
+        min-height: 250px;
+        padding: 3rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service {
+        background-size: 100% auto;
+        background-position: center top;
+        background-repeat: repeat;
+        min-height: 200px;
+        padding: 2rem 1rem;
+    }
+}
+
+/*--------------------- Responsive backgrounds (portfolio) ---------------------*/
+
+@media (max-width: 800px) {
+    .portfolio {
+        background-size: contain;
+        background-position: center top;
+        background-repeat: repeat;
+        min-height: 250px;
+        padding: 3rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio {
+        background-size: 100% auto;
+        background-position: center top;
+        background-repeat: repeat;
+        min-height: 200px;
+        padding: 2rem 1rem;
+    }
+}
+
+/*--------------------- Responsive backgrounds (testimonials) ---------------------*/
+
+@media (max-width: 800px) {
+    .testimonial {
+        background-size: contain;
+        background-position: center top;
+        background-repeat: repeat;
+        min-height: 250px;
+        padding: 3rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial {
+        background-size: 100% auto;
+        background-position: center top;
+        background-repeat: repeat;
+        min-height: 200px;
+        padding: 2rem 1rem;
+    }
+}
+
+/*--------------------- Responsive backgrounds (blogs) ---------------------*/
+
+@media (max-width: 800px) {
+    .blog {
+        background-size: contain;
+        background-position: center top;
+        background-repeat: repeat;
+        min-height: 250px;
+        padding: 3rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog {
+        background-size: 100% auto;
+        background-position: center top;
+        background-repeat: repeat;
+        min-height: 200px;
+        padding: 2rem 1rem;
+    }
+}
+
+/*--------------------- Responsive backgrounds (contact) ---------------------*/
+
+@media (max-width: 800px) {
+    .contact{
+        background-size: contain;
+        background-position: center top;
+        background-repeat: repeat;
+        min-height: 250px;
+        padding: 3rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        background-size: 100% auto;
+        background-position: center top;
+        background-repeat: repeat;
+        min-height: 200px;
+        padding: 2rem 1rem;
+    }
+}

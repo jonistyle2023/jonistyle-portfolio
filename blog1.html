@@ -15,7 +15,7 @@
     <header class="header">
         <! -- Logo -->
         <div class="logo">
-            <a href="#home">
+            <a href="index.html">
                 <!-- Logo claro (visible por defecto) -->
                 <img class="logo-light" src="assets/images/mylogo(light).svg" alt="logo claro" />
                 <!-- Logo oscuro (oculto por defecto) -->
@@ -25,13 +25,13 @@
         <! -- Logo End -->
         <! -- Navbar -->
         <nav class="navbar">
-            <a href="#home">home</a>
-            <a href="#about">about</a>
-            <a href="#service">service</a>
-            <a href="#portfolio">portfolio</a>
-            <a href="#testimonial">testimonial</a>
-            <a href="#blog">blogs</a>
-            <a href="#contact">contact</a>
+            <a href="index.htm#homel">home</a>
+            <a href="index.html#about">about</a>
+            <a href="index.html#service">service</a>
+            <a href="index.html#portfolio">portfolio</a>
+            <a href="index.html#testimonial">testimonial</a>
+            <a href="index.html#blog">blogs</a>
+            <a href="index.html#contact">contact</a>
         </nav>
 
         <! -- Light Mode - Dark Mode Start -->
@@ -89,9 +89,65 @@
             <article>
                 <p>Aquí va el contenido detallado de tu blog. Puedes insertar imágenes, texto, videos, etc.</p>
                 <img src="assets/images/Blogs/blog-1.png" alt="Blog Image">
-                <p>Continúa escribiendo sobre el tema...</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </article>
+
+            <div class="quote-box">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="italic">Lorem ipsum dolor</p>
+            </div>
+
+            <article>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </article>
+
+            <div class="content">
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <div class="image-container">
+                <img src="/assets/images/Blogs/blog-1.png" alt="Imagen 1">
+                <img src="/assets/images/Blogs/blog-2.png" alt="Imagen 2">
+            </div>
+
+            <div class="content">
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+
         </div>
+
+        <div class="tag-container">
+            <span class="tag">business</span>
+            <span class="tag">improve</span>
+            <span class="tag">management</span>
+            <span class="tag">work</span>
+        </div>
+
+        <div class="blog-social">
+            <h3 class="share-title">Share</h3>
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-x-twitter"></a>
+            <a href="#" class="fa-brands fa-pinterest"></a>
+            <a href="#" class="fa-brands fa-whatsapp"></a>
+            <a href="#" class="fa-regular fa-copy"></a>
+        </div>
+        <hr>
+
+        <div class="prev-container">
+            <a href="#" class="prev-link">< Prev</a>
+            <h2 class="title-previous">What Is the Metaverse, Exactly?</h2>
+        </div>
+        <hr>
+
     </section>
 
     <!-- Footer -->
@@ -107,5 +163,44 @@
             <p>created by <span>Jonistyle</span> | all rights reserved</p>
         </div>
     </footer>
+
+    <!-- JQuery -->
+    <script src="assets/vendors/jquery/jquery-3.6.0.js"></script>
+
+    <!-- SWIPER JS -->
+    <script src="assets/vendors/swiper/swiper.js"></script>
+
+    <!-- Magnific-Popup JS -->
+    <script src="assets/vendors/magnific-popup/jquery.magnific-popup.js"></script>
+
+    <!-- Typed JS -->
+    <script src="assets/vendors/typed/typed.js"></script>
+
+    <!-- Custom Script File -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/scroll-spy.js"></script>
+    <script src="assets/js/counter-up.js"></script>
+    <script src="assets/js/portfolio.js"></script>
+    <script src="assets/js/testi-slider.js"></script>
+    <script src="assets/js/blog-slider.js"></script>
+
+    <!-- dark-light mode Script -->
+    <script>
+        document.getElementById('switch').addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        window.addEventListener('load', () => {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        });
+    </script>
+
 </body>
 </html>
