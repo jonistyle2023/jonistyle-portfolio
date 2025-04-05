@@ -545,7 +545,7 @@ body.dark-mode .circle span {
 }
 
 body.dark-mode .about {
-    background-image: url("/assets/images/Backgrounds/Dark/resumeDark.svg");
+    background-image: url("/assets/images/Backgrounds/dark/resumeDark.svg");
 }
 
 .about .box-container{
@@ -782,7 +782,7 @@ body.dark-mode .skill-item .box .progress-bar {
 /*--------------------- 6- Qualification Area CSS (Start) ---------------------*/
 
 .qualification{
-    background-image: url('/assets/images/backgrounds/light/qualification.svg');
+    background-image: url('/assets/images/Backgrounds/Light/qualification.svg');
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -790,7 +790,7 @@ body.dark-mode .skill-item .box .progress-bar {
 }
 
 body.dark-mode .qualification {
-    background-image: url('/assets/images/backgrounds/dark/qualificationDark.svg');
+    background-image: url('/assets/images/Backgrounds/dark/qualificationDark.svg');
 }
 
 .qualification .box-container{
@@ -891,7 +891,7 @@ body.dark-mode .experience-item p {
 }
 
 body.dark-mode .service{
-    background-image: url("/assets/images/Backgrounds/Dark/servicesDark.svg");
+    background-image: url("/assets/images/Backgrounds/dark/servicesDark.svg");
 }
 
 .service .box-container{
@@ -984,7 +984,7 @@ body.dark-mode .service-item p {
 /*--------------------- 8- Portfolio Area CSS (Start) ---------------------*/
 
 .portfolio{
-    background-image: url("/assets/images/backgrounds/light/portfolio.svg");
+    background-image: url("/assets/images/Backgrounds/Light/portfolio.svg");
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -992,7 +992,7 @@ body.dark-mode .service-item p {
 }
 
 body.dark-mode .portfolio{
-    background-image: url("/assets/images/backgrounds/dark/portfolioDark.svg");
+    background-image: url("/assets/images/Backgrounds/dark/portfolioDark.svg");
 }
 
 .controls{
@@ -1275,7 +1275,7 @@ body.dark-mode .testi-item .intro h3 {
 }
 
 body.dark-mode .blog {
-    background-image: url("/assets/images/Backgrounds/Dark/blogDark.svg");
+    background-image: url("/assets/images/Backgrounds/dark/blogDark.svg");
 }
 
 .blog-slider{
@@ -1382,7 +1382,7 @@ body.dark-mode .blog-item p {
 }
 
 body.dark-mode .contact{
-    background-image: url("/assets/images/Backgrounds/Dark/contactDark.svg");
+    background-image: url("/assets/images/Backgrounds/dark/contactDark.svg");
 }
 
 .contact .alert{
