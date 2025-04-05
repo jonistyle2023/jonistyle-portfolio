@@ -537,7 +537,7 @@ body.dark-mode .circle span {
 
 /*--------------------- 5- About Area CSS (Start) ---------------------*/
 .about{
-    background-image: url("/assets/images/backgrounds/light/resume.svg");
+    background-image: url("/assets/images/Backgrounds/Light/resume.svg");
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -545,7 +545,7 @@ body.dark-mode .circle span {
 }
 
 body.dark-mode .about {
-    background-image: url("/assets/images/backgrounds/dark/resumeDark.svg");
+    background-image: url("/assets/images/Backgrounds/Dark/resumeDark.svg");
 }
 
 .about .box-container{
@@ -883,7 +883,7 @@ body.dark-mode .experience-item p {
 /*--------------------- 7- Services Area CSS (Start) ---------------------*/
 
 .service{
-    background-image: url("/assets/images/backgrounds/light/services.svg");
+    background-image: url("/assets/images/Backgrounds/Light/services.svg");
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -891,7 +891,7 @@ body.dark-mode .experience-item p {
 }
 
 body.dark-mode .service{
-    background-image: url("/assets/images/backgrounds/dark/servicesDark.svg");
+    background-image: url("/assets/images/Backgrounds/Dark/servicesDark.svg");
 }
 
 .service .box-container{
@@ -1185,7 +1185,7 @@ body.dark-mode .portfolio{
 /*--------------------- 9- Testimonials Area CSS (Start) ---------------------*/
 
 .testimonial{
-    background-image: url("/assets/images/backgrounds/light/testimonials.svg");
+    background-image: url("/assets/images/Backgrounds/Light/testimonials.svg");
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -1193,7 +1193,7 @@ body.dark-mode .portfolio{
 }
 
 body.dark-mode .testimonial {
-    background-image: url("/assets/images/backgrounds/dark/testimonialsDark.svg");
+    background-image: url("/assets/images/Backgrounds/Dark/testimonialsDark.svg");
 }
 
 .testimonial-slider{
@@ -1267,7 +1267,7 @@ body.dark-mode .testi-item .intro h3 {
 /*--------------------- 10- Blog Area CSS (Start) ---------------------*/
 
 .blog {
-    background-image: url("/assets/images/backgrounds/light/blog.svg");
+    background-image: url("/assets/images/Backgrounds/Light/blog.svg");
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -1275,7 +1275,7 @@ body.dark-mode .testi-item .intro h3 {
 }
 
 body.dark-mode .blog {
-    background-image: url("/assets/images/backgrounds/dark/blogDark.svg");
+    background-image: url("/assets/images/Backgrounds/Dark/blogDark.svg");
 }
 
 .blog-slider{
@@ -1374,7 +1374,7 @@ body.dark-mode .blog-item p {
 /*--------------------- 11- Contact Area CSS (Start) ---------------------*/
 
 .contact{
-    background-image: url("/assets/images/backgrounds/light/contact.svg");
+    background-image: url("/assets/images/Backgrounds/Light/contact.svg");
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -1382,7 +1382,7 @@ body.dark-mode .blog-item p {
 }
 
 body.dark-mode .contact{
-    background-image: url("/assets/images/backgrounds/dark/contactDark.svg");
+    background-image: url("/assets/images/Backgrounds/Dark/contactDark.svg");
 }
 
 .contact .alert{
