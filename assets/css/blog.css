@@ -1,0 +1,222 @@
+.blog-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    line-height: 3;
+    font-size: 18px;
+    padding-top: 9rem;
+}
+
+.title-blog {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.title-blog h1 {
+    font-size: 5rem;
+}
+
+.blog-loader {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    height: 9px;
+    width: 60px;
+    --c:no-repeat linear-gradient(#00c27a 0 0);
+    background: var(--c), var(--c), var(--c), var(--c);
+    background-size: 26% 3px;
+    animation: l2 1s infinite;
+}
+@keyframes l2 {
+    0%,
+    70%,
+    100% {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 100%,calc(2*100%/3) 100%,calc(3*100%/3) 100%}
+    14%  {background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 100%,calc(2*100%/3) 100%,calc(3*100%/3) 100%}
+    28%  {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 0   ,calc(2*100%/3) 100%,calc(3*100%/3) 100%}
+    42%  {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 100%,calc(2*100%/3) 0   ,calc(3*100%/3) 100%}
+    56%  {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 100%,calc(2*100%/3) 100%,calc(3*100%/3) 0   }
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.article .image-article {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    align-self: center;
+    margin: 2.5rem;
+}
+
+.blog-content h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.blog-content h2 {
+    display: flex;
+    justify-content: start;
+    margin: .5rem;
+}
+
+.blog-content p {
+    font-size: 1.6rem;
+    color: var(--black);
+    line-height: 1.6;
+    margin: .5rem;
+}
+
+.info-blog {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.blog-tag {
+    display: flex;
+    justify-content: center;  /* Centrar los elementos */
+    gap: 20px; /* Espaciado entre elementos */
+    align-items: center; /* Asegurar alineación vertical */
+}
+
+.info-blog {
+    display: flex;
+    align-items: center; /* Centrar verticalmente icono y texto */
+}
+
+.detail {
+    display: flex;
+    align-items: center; /* Centrar el icono y el texto */
+    gap: 8px; /* Espaciado entre icono y texto */
+}
+
+.detail i {
+    font-size: 16px; /* Tamaño de icono */
+    color: #00c27a; /* Cambia el color si deseas */
+}
+
+p {
+    margin: 0; /* Eliminar margen predeterminado del párrafo */
+    font-size: 14px;
+}
+
+
+.fa-solid,
+.fa-regular {
+    display: flex;
+}
+
+.quote-box {
+    color: var(--black);  /* Color del texto */
+    padding: 1.5rem;
+    border-left: 4px solid var(--green); /* Borde verde en la izquierda */
+    border-radius: 6px;  /* Bordes redondeados */
+    max-width: 600px; /* Ajustar el ancho si es necesario */
+}
+
+.italic {
+    font-style: italic; /* Texto en cursiva */
+    color: var(--green); /* Color verde para destacar */
+}
+
+.image-container {
+    display: flex; /* Coloca las imágenes en fila */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    gap: 10px; /* Espaciado entre las imágenes */
+    margin-top: 1rem;
+    margin-block-end: 1rem;
+}
+
+.image-container img {
+    width: 48%; /* Ajusta el ancho de cada imagen */
+    object-fit: cover; /* Evita distorsión si el tamaño cambia */
+}
+
+.tag-container {
+    display: flex; /* Coloca los elementos en fila */
+    gap: 10px; /* Espacio entre los botones */
+    justify-content: flex-start; /* Centra los botones */
+    -webkit-box-pack: center;
+    margin-top: 3rem;
+    margin-block-end: 1rem;
+}
+
+.tag {
+    display: inline-flex; /* Hace que se ajusten al contenido */
+    align-items: flex-start; /* Alineación vertical */
+    padding: 1px 15px; /* Espaciado interno */
+    border: 2px solid #00c27a; /* Borde verde */
+    color: #00c27a; /* Texto verde */
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: lowercase;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.tag:hover {
+    background-color: #00c27a;
+    color: black;
+}
+
+.blog-social {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    gap: 2rem; /* Espacio entre los iconos */
+}
+
+/* HTML: <div class="loader"></div> */
+.loader-share {
+    height: 3px;
+    width: 60px;
+    background: linear-gradient(#000 0 0) right/51% 100% no-repeat;
+    display: flex;
+    animation: l10-0 2s linear infinite;
+}
+.loader-share:before,
+.loader-share:after {
+    content: "";
+    width: 15px;
+    background: #000;
+    animation: l10-1 2s linear infinite;
+}
+.loader-share:after {
+    animation-delay: -1s;
+    --s:-1;
+}
+@keyframes l10-1 {
+    0%,100%{transform:scaleX(var(--s,1)) rotate(0)}
+    25%,75%   {transform:scaleX(var(--s,1)) rotate(180deg)}
+}
+
+@keyframes l10-0 {
+    0%,49.9%{transform:scaleX( 1)}
+    50%,100%{transform:scaleX(-1)}
+}
+
+.prev-container {
+    text-align: start; /* Centra el contenido */
+}
+
+.prev-link {
+    display: block; /* Hace que el enlace ocupe su propia línea */
+    margin-bottom: 10px; /* Espacio entre el enlace y el título */
+    color: #000; /* Color del texto */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    font-size: 16px; /* Tamaño del texto */
+    font-weight: normal; /* Grosor del texto */
+}
+
+.title {
+    font-size: 24px; /* Tamaño del título */
+    font-weight: bold; /* Grosor del título */
+    margin: 0; /* Elimina el margen predeterminado del h1 */
+}

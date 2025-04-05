@@ -545,7 +545,7 @@ body.dark-mode .circle span {
 }
 
 body.dark-mode .about {
-    background-image: url("assets/images/Backgrounds/dark/resumeDark.svg");
+    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/dark/resumeDark.svg");
 }
 
 .about .box-container{
@@ -782,7 +782,7 @@ body.dark-mode .skill-item .box .progress-bar {
 /*--------------------- 6- Qualification Area CSS (Start) ---------------------*/
 
 .qualification{
-    background-image: url('/assets/images/Backgrounds/Light/qualification.svg');
+    background-image: url('/jonistyle-portfolio/assets/images/Backgrounds/Light/qualification.svg');
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -790,7 +790,7 @@ body.dark-mode .skill-item .box .progress-bar {
 }
 
 body.dark-mode .qualification {
-    background-image: url('/assets/images/Backgrounds/dark/qualificationDark.svg');
+    background-image: url('/jonistyle-portfolio/assets/images/Backgrounds/dark/qualificationDark.svg');
 }
 
 .qualification .box-container{
@@ -883,7 +883,7 @@ body.dark-mode .experience-item p {
 /*--------------------- 7- Services Area CSS (Start) ---------------------*/
 
 .service{
-    background-image: url("/assets/images/Backgrounds/Light/services.svg");
+    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/Light/services.svg");
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -891,7 +891,7 @@ body.dark-mode .experience-item p {
 }
 
 body.dark-mode .service{
-    background-image: url("/assets/images/Backgrounds/dark/servicesDark.svg");
+    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/dark/servicesDark.svg");
 }
 
 .service .box-container{
@@ -984,7 +984,7 @@ body.dark-mode .service-item p {
 /*--------------------- 8- Portfolio Area CSS (Start) ---------------------*/
 
 .portfolio{
-    background-image: url("/assets/images/Backgrounds/Light/portfolio.svg");
+    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/Light/portfolio.svg");
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -992,7 +992,7 @@ body.dark-mode .service-item p {
 }
 
 body.dark-mode .portfolio{
-    background-image: url("/assets/images/Backgrounds/dark/portfolioDark.svg");
+    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/dark/portfolioDark.svg");
 }
 
 .controls{
@@ -1185,7 +1185,7 @@ body.dark-mode .portfolio{
 /*--------------------- 9- Testimonials Area CSS (Start) ---------------------*/
 
 .testimonial{
-    background-image: url("/assets/images/Backgrounds/Light/testimonials.svg");
+    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/Light/testimonials.svg");
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -1193,7 +1193,7 @@ body.dark-mode .portfolio{
 }
 
 body.dark-mode .testimonial {
-    background-image: url("/assets/images/Backgrounds/Dark/testimonialsDark.svg");
+    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/Dark/testimonialsDark.svg");
 }
 
 .testimonial-slider{
@@ -1267,7 +1267,7 @@ body.dark-mode .testi-item .intro h3 {
 /*--------------------- 10- Blog Area CSS (Start) ---------------------*/
 
 .blog {
-    background-image: url("/assets/images/Backgrounds/Light/blog.svg");
+    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/Light/blog.svg");
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -1275,7 +1275,7 @@ body.dark-mode .testi-item .intro h3 {
 }
 
 body.dark-mode .blog {
-    background-image: url("/assets/images/Backgrounds/dark/blogDark.svg");
+    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/dark/blogDark.svg");
 }
 
 .blog-slider{
@@ -1374,7 +1374,7 @@ body.dark-mode .blog-item p {
 /*--------------------- 11- Contact Area CSS (Start) ---------------------*/
 
 .contact{
-    background-image: url("/assets/images/Backgrounds/Light/contact.svg");
+    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/Light/contact.svg");
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -1382,7 +1382,7 @@ body.dark-mode .blog-item p {
 }
 
 body.dark-mode .contact{
-    background-image: url("/assets/images/Backgrounds/dark/contactDark.svg");
+    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/dark/contactDark.svg");
 }
 
 .contact .alert{
@@ -1632,137 +1632,6 @@ footer .content p span{
 
 /*--------------------- Portfolio-specific styles ----------------*/
 
-.blog-content {
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
-    font-size: 18px;
-    padding-top: 9rem;
-}
 
-.blog-content img {
-    max-width: 100%;
-    height: auto;
-    margin: 20px 0;
-}
-
-.blog-content h1 {
-    display: flex;
-    justify-content: center;
-}
-
-.blog-content p {
-    font-size: 1.6rem;
-    color: var(--black);
-    line-height: 1.6;
-    padding-left: 1rem;
-}
-
-.info-blog {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.blog-tag {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.fa-solid,
-.fa-regular {
-    display: flex;
-}
-
-.quote-box {
-    color: var(--black);  /* Color del texto */
-    padding: 1.5rem;
-    border-left: 4px solid var(--green); /* Borde verde en la izquierda */
-    border-radius: 6px;  /* Bordes redondeados */
-    max-width: 600px; /* Ajustar el ancho si es necesario */
-}
-
-.italic {
-    font-style: italic; /* Texto en cursiva */
-    color: var(--green); /* Color verde para destacar */
-}
-
-.image-container {
-    display: flex; /* Coloca las imágenes en fila */
-    justify-content: center; /* Centra las imágenes horizontalmente */
-    gap: 10px; /* Espaciado entre las imágenes */
-}
-
-.image-container img {
-    width: 48%; /* Ajusta el ancho de cada imagen */
-    object-fit: cover; /* Evita distorsión si el tamaño cambia */
-}
-
-.tag-container {
-    display: flex; /* Coloca los elementos en fila */
-    gap: 10px; /* Espacio entre los botones */
-    justify-content: flex-start; /* Centra los botones */
-    -webkit-box-pack: center;
-}
-
-.tag {
-    display: inline-flex; /* Hace que se ajusten al contenido */
-    align-items: flex-start; /* Alineación vertical */
-    padding: 5px 15px; /* Espaciado interno */
-    border: 2px solid #00c27a; /* Borde verde */
-    color: #00c27a; /* Texto verde */
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: lowercase;
-    border-radius: 5px; /* Bordes redondeados */
-    transition: 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-.tag:hover {
-    background-color: #00c27a;
-    color: black;
-}
-
-.blog-social {
-    display: flex;
-    align-items: center; /* Alinea verticalmente los elementos */
-    gap: 2rem; /* Espacio entre los iconos */
-}
-
-.share-title {
-    position: relative;
-    margin-right: 2rem; /* Espacio entre el título y el separador */
-}
-
-.share-title::after {
-    content: "";
-    position: absolute;
-    right: -1rem; /* Posición del separador */
-    top: 50%;
-    transform: translateY(-50%);
-    height: 20px; /* Altura del separador */
-    width: 1px; /* Grosor del separador */
-    background-color: #000; /* Color del separador */
-}
-
-.prev-container {
-    text-align: start; /* Centra el contenido */
-    margin: 20px 0; /* Espaciado superior e inferior */
-}
-
-.prev-link {
-    display: block; /* Hace que el enlace ocupe su propia línea */
-    margin-bottom: 10px; /* Espacio entre el enlace y el título */
-    color: #000; /* Color del texto */
-    text-decoration: none; /* Quita el subrayado del enlace */
-    font-size: 16px; /* Tamaño del texto */
-    font-weight: normal; /* Grosor del texto */
-}
-
-.title {
-    font-size: 24px; /* Tamaño del título */
-    font-weight: bold; /* Grosor del título */
-    margin: 0; /* Elimina el margen predeterminado del h1 */
-}
 
 
