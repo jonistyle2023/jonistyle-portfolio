@@ -1,40 +1,32 @@
-/* Table of Contents
-----------------------------------
-
-0- Global CSS
-1- Heading CSS
-2- Button CSS
-3- Header Area CSS
-4- Home Area CSS
-5- About Area CSS
-6- Qualification Area CSS
-7- Services Area CSS
-8- Portfolio Area CSS
-9- Testimonials Area CSS
-10- Blog Area CSS
-11- Contact Area CSS
-12- Footer Area CSS
-13- Scroll-Top Area CSS
-
-*/
-
-/*--------------------- 0- Global CSS (Start) ---------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --green: #089D66;
-    --teal: #00d084;
-    --black: #121212;
-    --white: #F7F5F2;
-    --grey: #E2E2E2;
-    --dark-grey: #7A7B7B;
-    --gray-background: #242424;
+    /* Light Theme Color */
+    --textLight: #06130e;
+    --backgroundLight: #f7fdfc;
+    --primaryLight: #44C59F;
+    --opacityPlight: #d8f3e9;
+    --secondaryLight: #96A9DF;
+    --opacitySLight: #ebeff9;
+    --acentLight: #75aaff;
+
+    /* Dark Theme color */
+    --textDark: #ecf9f4;
+    --backgroundDark: #020807;
+    --primaryDark: #3abb94;
+    --opacityPDark: #0c271f;
+    --secondaryDark: #203469;
+    --opacitySDark: #060a14;
+    --acentDark: #0058e6;
+
 }
 
-/* Modo oscuro */
-
 *{
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+            "wdth" 100;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     margin: 0;
@@ -48,8 +40,8 @@
 }
 
 *::selection{
-    color: var(--white);
-    background-color: var(--green);
+    color: var(--backgroundLight);
+    background-color: var(--primaryLight);
 }
 
 html{
@@ -60,11 +52,11 @@ html{
 }
 
 body{
-    background-color: var(--white);
+    background-color: var(--backgroundLight);
 }
 /* Modo oscuro */
 body.dark-mode{
-    background-color: var(--black);
+    background-color: var(--backgroundDark);
 }
 
 section{
@@ -77,23 +69,23 @@ section{
 
 ::-webkit-scrollbar-thumb{
     border-radius: 1rem;
-    background-color: var(--green);
+    background-color: var(--primaryLight);
 }
 
 ::-webkit-scrollbar-track{
-    background-color: var(--white);
+    background-color: var(--backgroundLight);
 }
 
 .swiper-pagination-bullet{
     height: 1rem;
     width: 1rem;
     border-radius: 50rem;
-    background-color: var(--green);
+    background-color: var(--primaryLight);
 }
 
 .swiper-pagination-bullet-active{
     width: 3rem;
-    background: var(--green);
+    background: var(--primaryLight);
 }
 
 /*--------------------- 0- Global CSS (End) ---------------------*/
@@ -108,18 +100,22 @@ section{
 .heading h2{
     text-align: center;
     padding-bottom: 2rem;
-    color: var(--green);
+    color: var(--textLight);
     font-size: 4rem;
+}
+
+body.dark-mode .heading h2{
+    color: var(--textDark);
 }
 
 .heading h2 span{
     position: relative;
     z-index: 0;
-    color: var(--black);
+    color: var(--textLight);
 }
 
 body.dark-mode .heading h2 span{
-    color: var(--white);
+    color: var(--textDark);
 }
 
 .heading h2 span::before{
@@ -127,10 +123,14 @@ body.dark-mode .heading h2 span{
     position: absolute;
     bottom: -0.5rem; left: 0;
     z-index: -1;
-    background: var(--green);
+    background: var(--acentLight);
     height: 0.2rem;
     width: 80%;
     margin-left: 10%;
+}
+
+body.dark-mode .heading h2 span::before{
+    background: var(--acentDark);
 }
 
 .navbar{
@@ -148,9 +148,10 @@ body.dark-mode .heading h2 span{
     display: inline-block;
     padding: 1rem 2rem;
     font-size: 1.8rem;
-    color: var(--green);
+    color: var(--primaryLight);
     background-color: transparent;
-    border: 0.2rem solid var(--green);
+    border: 0.2rem solid var(--primaryLight);
+    border-radius: 1.5rem;
 }
 
 .btn i{
@@ -158,10 +159,10 @@ body.dark-mode .heading h2 span{
 }
 
 .btn:hover{
-    color: var(--white);
-    background-color:  var(--teal);
+    color: var(--textLight);
+    background-color:  var(--primaryLight);
     cursor: pointer;
-    border: 0.2rem solid var(--teal);
+    border: 0.2rem solid var(--primaryLight);
 }
 /*--------------------- 2- Button CSS (End) ---------------------*/
 
@@ -192,14 +193,14 @@ header{
 }
 
 .header.sticky{
-    border-bottom: 0.1rem solid var(--black);
-    background-color: var(--white);
+    border-bottom: 0.1rem solid var(--textLight);
+    background-color: var(--backgroundLight);
     backdrop-filter: blur(1.5rem);
 }
 
 body.dark-mode .header.sticky {
-    border-bottom: 0.1rem solid var(--white);
-    background-color: var(--black);
+    border-bottom: 0.1rem solid var(--textDark);
+    background-color: var(--textLight);
     backdrop-filter: blur(1.5rem);
 }
 
@@ -220,23 +221,23 @@ body.dark-mode .logo-dark {
 }
 
 header .navbar a{
-    color: var(--black);
+    color: var(--textLight);
     font-size: 1.8rem;
     margin-left: 1rem;
 }
 
 body.dark-mode .navbar a{
-    color: var(--white);
+    color: var(--textDark);
 }
 
 header .navbar a:hover,
 header .navbar a.active{
-    color: var(--green);
+    color: var(--primaryLight);
 }
 
 header #menu-btn{
     font-size: 3rem;
-    color: var(--black);
+    color: var(--textLight);
     cursor: pointer;
     -webkit-transition: all 0.5s linear;
         -moz-transition: all 0.5s linear;
@@ -251,18 +252,18 @@ header .fa-times{
 }
 
 header #menu-btn:hover{
-    color: var(--green);
+    color: var(--primaryLight);
 }
 
 body.dark-mode header #menu-btn:hover {
-    color: var(--teal);
+    color: var(--secondaryDark);
 }
 
 /*--------------------- 3- Header Area CSS (End) ---------------------*/
 
 /*--------------------- Dark - Light mode (Start) ---------------------*/
 .toggle {
-    background-color: var(--white);
+    background-color: var(--backgroundLight);
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -322,7 +323,7 @@ body.dark-mode header #menu-btn:hover {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    color: var(--black);
+    color: var(--textLight);
     font-size: 1.5rem;
 }
 
@@ -332,13 +333,13 @@ body.dark-mode header #menu-btn:hover {
 }
 
 body.dark-mode .follow-me p {
-    color: var(--white);
+    color: var(--textDark);
 }
 
 .separator {
     display: flex;
     height: 7.5rem;
-    background-color: var(--black);
+    background-color: var(--textLight);
     margin: 30px 10px 10px 10px;
     align-items: flex-start;
 }
@@ -350,16 +351,16 @@ body.dark-mode .follow-me p {
 }
 
 #sidebar i {
-    color: var(--black);
+    color: var(--textLight);
     font-size: 2rem;
 }
 
 body.dark-mode #sidebar i {
-    color: var(--white);
+    color: var(--textDark);
 }
 
 #sidebar a:hover i {
-    color: var(--teal);
+    color: var(--primaryLight);
     transform: scale(1.2);
 }
 /*--------------------- SideBar Area (End) ---------------------*/
@@ -428,34 +429,42 @@ body.dark-mode #sidebar i {
 .home .content h2{
     font-size: 2.5rem;
     font-weight: 400;
-    color: var(--green);
+    color: var(--textLight);
 }
 
 .home .content h1{
     font-size: 4rem;
-    color: var(--black);
+    color: var(--textLight);
     padding: 1rem 0;
     text-transform: none;
 }
 
 body.dark-mode .home .content h1 {
-    color: var(--white);
+    color: var(--textDark);
+}
+
+body.dark-mode .home .content h2 {
+    color: var(--textDark);
 }
 
 .home .content h1 span{
-    color: var(--green);
+    color: var(--acentLight);
+}
+
+body.dark-mode .home .content h1 span {
+    color: var(--acentDark);
 }
 
 .home .content p{
     font-size: 1.8rem;
     font-weight: 400;
-    color: var(--black);
+    color: var(--textLight);
     padding-bottom: 2rem;
     line-height: 1.5;
 }
 
 body.dark-mode .home .content p {
-    color: var(--white);
+    color: var(--textDark);
 }
 
 /*---------------  CIRCLE ANIMATION (START)  ---------------*/
@@ -481,19 +490,19 @@ body.dark-mode .home .content p {
 }
 
 .background-circle{
-    background: var(--grey);
+    background: var(--opacitySLight);
     border-radius: 50%;
     width: 450px;
     height: 450px;
     z-index: 9;
-    box-shadow: 0 0 20px var(--black);
+    box-shadow: 0 0 20px var(--textLight);
     margin-left: 4.5rem;
     margin-top: -4rem;
 }
 
 body.dark-mode .background-circle {
-    background: var(--gray-background);
-    box-shadow: 0 0 20px var(--teal);
+    background: var(--opacitySDark);
+    box-shadow: 0 0 20px var(--acentDark);
 }
 
 .circle span {
@@ -501,7 +510,7 @@ body.dark-mode .background-circle {
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.7); /* Icons color Circle*/
-    box-shadow: 0 0 10px var(--black);
+    box-shadow: 0 0 10px var(--textLight);
     border-radius: 50%;
     transform-origin: center;
     transform-style: preserve-3d;
@@ -537,7 +546,7 @@ body.dark-mode .circle span {
 
 /*--------------------- 5- About Area CSS (Start) ---------------------*/
 .about{
-    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/Light/resume.svg");
+    background-image: url("/assets/images/Backgrounds/Light/resume.svg");
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -545,7 +554,7 @@ body.dark-mode .circle span {
 }
 
 body.dark-mode .about {
-    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/dark/resumeDark.svg");
+    background-image: url("/assets/images/Backgrounds/dark/resumeDark.svg");
 }
 
 .about .box-container{
@@ -568,7 +577,11 @@ body.dark-mode .about {
 
 .about .image img{
     width: 100%;
-    border: 1rem solid var(--green);
+    border: 1rem solid var(--primaryLight);
+}
+
+body.dark-mode .about .image img {
+    border: 1rem solid var(--primaryDark);
 }
 
 .about .content{
@@ -579,23 +592,23 @@ body.dark-mode .about {
 
 .about .content h2{
     font-size: 3rem;
-    color: var(--black);
+    color: var(--textLight);
     padding-bottom: 1rem;
 }
 
 body.dark-mode .about .content h2{
-    color: var(--white);
+    color: var(--textDark);
 }
 
 .about .content > p{
     font-size: 1.6rem;
-    color: var(--black);
+    color: var(--textLight);
     line-height: 1.6;
     padding-bottom: 1rem;
 }
 
 body.dark-mode .about .content p {
-    color: var(--white);
+    color: var(--textDark);
 }
 
 .about .content .about-info{
@@ -621,22 +634,22 @@ body.dark-mode .about .content p {
 
 .about .content .about-info .info h4{
     font-size: 1.6rem;
-    color: var(--black);
+    color: var(--textLight);
     padding-bottom: 1rem;
 }
 
 body.dark-mode .about .content .about-info .info h4 {
-    color: var(--white);
+    color: var(--textDark);
 }
 
 .about .content .about-info .info span{
     font-size: 1.6rem;
     font-weight: 400;
-    color: var(--black);
+    color: var(--textLight);
 }
 
 body.dark-mode .about .content .about-info .info span{
-    color: var(--white);
+    color: var(--textDark);
 }
 
 .about .content .about-info .info .btn{
@@ -666,31 +679,31 @@ body.dark-mode .about .content .about-info .info span{
     -ms-flex: 1 1 18rem;
     flex: 1 1 18rem;
     text-align: center;
-    background-color: var(--grey);
+    background-color: var(--opacityPlight);
     padding: 2rem;
 }
 
 body.dark-mode .counting .box {
-    background-color: var(--gray-background);
+    background-color: var(--opacityPDark);
 }
 
 .counting .box .count{
     font-size: 3.5rem;
-    color: var(--green);
+    color: var(--primaryLight);
     padding-bottom: 0.5rem;
 }
 
 body.dark-mode .box .count {
-    color: var(--teal);
+    color: var(--primaryDark);
 }
 
 .counting .box h3{
     font-size: 1.8rem;
-    color: var(--black);
+    color: var(--textLight);
 }
 
 body.dark-mode .counting .box h3 {
-    color: var(--white);
+    color: var(--textDark);
 }
 
 .skill-container{
@@ -725,30 +738,34 @@ body.dark-mode .counting .box h3 {
     justify-content: space-between;
     padding:.7rem 0;
     font-size: 1.7rem;
-    color: var(--black);
+    color: var(--textLight);
     font-weight: 400;
 }
 
 body.dark-mode .skill-item .box h3 {
-    color: var(--white);
+    color: var(--textDark);
 }
 
 .skill-item .box .progress-bar{
     width:100%;
-    background:var(--grey);
+    background:var(--opacitySLight);
     overflow:hidden;
     height:1rem;
     border-radius: 50rem;
 }
 
 body.dark-mode .skill-item .box .progress-bar {
-    background:var(--gray-background);
+    background:var(--opacitySDark);
 }
 
 .skill-item .box .progress-bar span{
     display:block;
     height:100%;
-    background: var(--green);
+    background: var(--primaryLight);
+}
+
+body.dark-mode .skill-item .box .progress-bar span {
+    background: var(--primaryDark);
 }
 
 .skill-item.item1 .box:nth-child(1) .progress-bar span{
@@ -782,7 +799,7 @@ body.dark-mode .skill-item .box .progress-bar {
 /*--------------------- 6- Qualification Area CSS (Start) ---------------------*/
 
 .qualification{
-    background-image: url('/jonistyle-portfolio/assets/images/Backgrounds/Light/qualification.svg');
+    background-image: url('/assets/images/Backgrounds/Light/qualification.svg');
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -790,7 +807,7 @@ body.dark-mode .skill-item .box .progress-bar {
 }
 
 body.dark-mode .qualification {
-    background-image: url('/jonistyle-portfolio/assets/images/Backgrounds/dark/qualificationDark.svg');
+    background-image: url('/assets/images/Backgrounds/dark/qualificationDark.svg');
 }
 
 .qualification .box-container{
@@ -820,8 +837,12 @@ body.dark-mode .qualification {
     -ms-flex: 1 1 40rem;
         flex: 1 1 40rem;
     padding: 0 3rem 2rem 3rem;
-    border-left: 0.2rem solid var(--green);
+    border-left: 0.2rem solid var(--acentLight);
     margin-left: 2rem;
+}
+
+body.dark-mode .experience-item {
+    border-left: 0.2rem solid var(--acentDark);
 }
 
 .experience-item i{
@@ -834,8 +855,12 @@ body.dark-mode .qualification {
     line-height: 5rem;
     text-align: center;
     font-size: 2rem;
-    color: var(--black);
-    background: var(--green);
+    color: var(--backgroundLight);
+    background: var(--acentLight);
+}
+
+body.dark-mode .experience-item i {
+    background: var(--acentDark);
 }
 
 .experience-item .content{
@@ -845,36 +870,36 @@ body.dark-mode .qualification {
 }
 
 .experience-item span{
-    background: var(--grey);
-    color: var(--black);
+    background: var(--opacitySLight);
+    color: var(--textLight);
     padding: 0.5rem 1.5rem;
     font-size: 1.8rem;
     border-radius: 50rem;
 }
 
 body.dark-mode .experience-item span {
-    background: var(--gray-background);
-    color: var(--white);
+    background: var(--opacitySDark);
+    color: var(--textDark);
 }
 
 .experience-item h3{
     font-size: 3.5rem;
-    color: var(--black);
+    color: var(--textLight);
     padding: 2rem 0;
 }
 
 body.dark-mode .experience-item h3 {
-    color: var(--white);
+    color: var(--textDark);
 }
 
 .experience-item p{
-    color: var(--black);
+    color: var(--textLight);
     font-size: 1.6rem;
     line-height: 2.5rem;
 }
 
 body.dark-mode .experience-item p {
-    color: var(--white);
+    color: var(--textDark);
 }
 /*--------------------- 6- Qualification Area CSS (End) ---------------------*/
 
@@ -883,7 +908,7 @@ body.dark-mode .experience-item p {
 /*--------------------- 7- Services Area CSS (Start) ---------------------*/
 
 .service{
-    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/Light/services.svg");
+    background-image: url("/assets/images/Backgrounds/Light/services.svg");
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -891,7 +916,7 @@ body.dark-mode .experience-item p {
 }
 
 body.dark-mode .service{
-    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/dark/servicesDark.svg");
+    background-image: url("/assets/images/Backgrounds/dark/servicesDark.svg");
 }
 
 .service .box-container{
@@ -913,7 +938,7 @@ body.dark-mode .service{
     -webkit-box-flex: 1;
     -ms-flex: 1 1 35rem;
         flex: 1 1 35rem;
-    background-color: var(--grey);
+    background-color: var(--opacityPlight);
     padding: 4rem 3rem;
     text-align: center;
     border: 0.1rem solid rgba(255, 255, 255, 0.3);
@@ -925,56 +950,56 @@ body.dark-mode .service{
 }
 
 body.dark-mode .service-item {
-    background-color: var(--black);
+    background-color: var(--opacityPDark);
 }
 
 .service-item:hover{
-    background-color: var(--green);
+    background-color: var(--opacitySLight);
 }
 
 body.dark-mode .service-item:hover {
-    background-color: var(--green);
+    background-color: var(--opacitySDark);
 }
 
 .service-item i{
-    color: var(--black);
+    color: var(--primaryLight);
     font-size: 4rem;
 }
 
 body.dark-mode .service-item i {
-    color: var(--white);
+    color: var(--primaryDark);
 }
 
 .service-item h3{
     font-size: 2rem;
-    color: var(--black);
+    color: var(--textLight);
     padding: 1.5rem 0;
 }
 
 body.dark-mode .service-item h3 {
-    color: var(--white);
+    color: var(--textDark);
 }
 
 .service-item p{
     font-size: 1.6rem;
-    color: var(--black);
+    color: var(--textLight);
     line-height: 1.6;
 }
 
 body.dark-mode .service-item p {
-    color: var(--white);
+    color: var(--textDark);
 }
 
 .service-item:hover i{
-    color: var(--black);
+    color: var(--primaryLight);
 }
 
 .service-item:hover h3{
-    color: var(--grey);
+    color: var(--textLight);
 }
 
 .service-item:hover p{
-    color: var(--white);
+    color: var(--textLight);
 }
 
 /*--------------------- 7- Services Area CSS (End) ---------------------*/
@@ -984,7 +1009,7 @@ body.dark-mode .service-item p {
 /*--------------------- 8- Portfolio Area CSS (Start) ---------------------*/
 
 .portfolio{
-    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/Light/portfolio.svg");
+    background-image: url("/assets/images/Backgrounds/Light/portfolio.svg");
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -992,7 +1017,7 @@ body.dark-mode .service-item p {
 }
 
 body.dark-mode .portfolio{
-    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/dark/portfolioDark.svg");
+    background-image: url("/assets/images/Backgrounds/dark/portfolioDark.svg");
 }
 
 .controls{
@@ -1018,8 +1043,8 @@ body.dark-mode .portfolio{
 
 .controls .button.active{
     cursor: pointer;
-    background-color: var(--green);
-    color: var(--white);
+    background-color: var(--primaryLight);
+    color: var(--backgroundLight);
 }
 
 .portfolio .box-container{
@@ -1052,7 +1077,7 @@ body.dark-mode .portfolio{
     width: 80%;
     border-radius: 0.5rem;
     background-color: rgba(0, 0, 0, 0.8);
-    color: var(--green);
+    color: var(--primaryLight);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1073,7 +1098,7 @@ body.dark-mode .portfolio{
 .portfolio-item .content h4{
     font-size: 2rem;
     font-weight: bold;
-    color: var(--green);
+    color: var(--primaryLight);
     transform-origin: top;
     -webkit-transform: translateY(-10rem);
             transform: translateY(-10rem);
@@ -1088,7 +1113,7 @@ body.dark-mode .portfolio{
 .portfolio-item .content p{
     font-size: 1.8rem;
     font-weight: 400;
-    color: var(--white);
+    color: var(--backgroundLight);
     transform-origin: top;
     -webkit-transform: translateY(-10rem);
             transform: translateY(-10rem);
@@ -1101,7 +1126,7 @@ body.dark-mode .portfolio{
 
 .portfolio-item .content .view-btn{
     font-size: 2rem;
-    color: var(--green);
+    color: var(--primaryLight);
     transform-origin: top;
     -webkit-transform: translateY(-10rem);
             transform: translateY(-10rem);
@@ -1185,7 +1210,7 @@ body.dark-mode .portfolio{
 /*--------------------- 9- Testimonials Area CSS (Start) ---------------------*/
 
 .testimonial{
-    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/Light/testimonials.svg");
+    background-image: url("/assets/images/Backgrounds/Light/testimonials.svg");
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -1193,7 +1218,7 @@ body.dark-mode .portfolio{
 }
 
 body.dark-mode .testimonial {
-    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/Dark/testimonialsDark.svg");
+    background-image: url("/assets/images/Backgrounds/Dark/testimonialsDark.svg");
 }
 
 .testimonial-slider{
@@ -1202,63 +1227,81 @@ body.dark-mode .testimonial {
     overflow: hidden;
 }
 
-.testi-item{
+.test-item{
     text-align: center;
-    border: 0.1rem solid var(--dark-grey);
+    border: 0.1rem solid var(--opacityPlight);
     border-radius: 0.5rem;
     padding: 4rem 2rem;
+    background-color: var(--opacitySLight);
 }
 
-.testi-item:hover{
-    border-color: var(--green);
+body.dark-mode .test-item {
+    border: 0.1rem solid var(--opacitySDark);
+    background-color: var(--opacitySDark);
 }
 
-.testi-item img{
+.test-item:hover{
+    border-color: var(--textLight);
+}
+
+body.dark-mode .test-item:hover {
+    border-color: var(--textDark);
+}
+
+.test-item img{
     height: 10rem;
     width: 10rem;
     border-radius: 50%;
-    border: 0.5rem solid var(--black);
+    border: 0.5rem solid var(--textLight);
 }
 
-body.dark-mode .testi-item img {
-    border: 0.5rem solid var(--white);
+body.dark-mode .test-item img {
+    border: 0.5rem solid var(--textDark);
 }
 
-.testi-item .fa-quote-left{
+.test-item .fa-quote-left{
     display: block;
     font-size: 3rem;
-    color: var(--black);
+    color: var(--acentLight);
     margin: 1rem 0;
 }
 
-.testi-item p{
-    color: var(--dark-grey);
+body.dark-mode .test-item .fa-quote-left {
+    color: var(--acentDark);
+}
+
+.test-item p{
+    color: var(--textLight);
     font-size: 1.5rem;
     line-height: 1.5;
 }
 
-body.dark-mode .testi-item p {
-    color: var(--white);
+body.dark-mode .test-item p {
+    color: var(--textDark);
 }
 
-.testi-item .intro{
+.test-item .intro{
     margin: 1rem 0;
 }
 
-.testi-item .intro h3{
+.test-item .intro h3{
     font-size: 2rem;
-    color: var(--black);
+    color: var(--textLight);
     padding-bottom: 0.5rem;
 }
 
-body.dark-mode .testi-item .intro h3 {
-    color: var(--white);
+body.dark-mode .test-item .intro h3 {
+    color: var(--textDark);
 }
 
-.testi-item .intro h5{
-    color: var(--green);
+.test-item .intro h5{
+    color: var(--acentLight);
     font-size: 1.4rem;
     font-weight: 400;
+}
+
+body.dark-mode .test-item .intro h5 {
+    color: var(--acentDark);
 }
 /*--------------------- 9- Testimonials Area CSS (End) ---------------------*/
 
@@ -1267,7 +1310,7 @@ body.dark-mode .testi-item .intro h3 {
 /*--------------------- 10- Blog Area CSS (Start) ---------------------*/
 
 .blog {
-    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/Light/blog.svg");
+    background-image: url("/assets/images/Backgrounds/Light/blog.svg");
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -1275,7 +1318,7 @@ body.dark-mode .testi-item .intro h3 {
 }
 
 body.dark-mode .blog {
-    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/dark/blogDark.svg");
+    background-image: url("/assets/images/Backgrounds/dark/blogDark.svg");
 }
 
 .blog-slider{
@@ -1285,7 +1328,7 @@ body.dark-mode .blog {
 }
 
 .blog-item{
-    background-color: var(--grey);
+    background-color: var(--opacityPlight);
     border: 0.1rem solid rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
     overflow: hidden;
@@ -1312,7 +1355,7 @@ body.dark-mode .blog {
 }
 
 body.dark-mode .blog-item .content {
-    background-color: var(--gray-background);
+    background-color: var(--opacityPDark);
 }
 
 .blog-item .content .intro{
@@ -1322,9 +1365,13 @@ body.dark-mode .blog-item .content {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    border-bottom: 0.2rem solid var(--grey);
+    border-bottom: 0.2rem solid var(--secondaryLight);
     padding: 1rem 0;
     margin-bottom: 1.5rem;
+}
+
+body.dark-mode .blog-item .content .intro {
+    border-bottom: 0.2rem solid var(--acentDark);
 }
 
 .blog-item .content .intro h5{
@@ -1332,36 +1379,40 @@ body.dark-mode .blog-item .content {
 }
 
 .blog-item .content .intro h5 i{
-    color: var(--green);
+    color: var(--acentLight);
     padding-right: 0.5rem;
 }
 
+body.dark-mode .blog-item .content .intro h5 i {
+    color: var(--acentDark);
+}
+
 .blog-item .content .intro h5 span{
-    color: var(--black);
+    color: var(--textLight);
 }
 
 body.dark-mode .blog-item .content .intro h5 span {
-    color: var(--white);
+    color: var(--textDark);
 }
 
 .blog-item .content .main-heading{
     font-size: 2rem;
     font-weight: bold;
-    color: var(--black);
+    color: var(--textLight);
 }
 
 body.dark-mode .blog-item .content .main-heading{
-    color: var(--white);
+    color: var(--textDark);
 }
 
 .blog-item p{
     padding: 1rem 0;
     font-size: 1.6rem;
-    color: var(--black);
+    color: var(--textLight);
 }
 
 body.dark-mode .blog-item p {
-    color: var(--white);
+    color: var(--textDark);
 }
 
 .blog-item .btn{
@@ -1374,7 +1425,7 @@ body.dark-mode .blog-item p {
 /*--------------------- 11- Contact Area CSS (Start) ---------------------*/
 
 .contact{
-    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/Light/contact.svg");
+    background-image: url("/assets/images/Backgrounds/Light/contact.svg");
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -1382,12 +1433,12 @@ body.dark-mode .blog-item p {
 }
 
 body.dark-mode .contact{
-    background-image: url("/jonistyle-portfolio/assets/images/Backgrounds/dark/contactDark.svg");
+    background-image: url("/assets/images/Backgrounds/dark/contactDark.svg");
 }
 
 .contact .alert{
     font-size: 2rem;
-    color: var(--green);
+    color: var(--primaryLight);
     border-radius: 0.5rem;
     padding-left: 1rem;
 }
@@ -1415,21 +1466,21 @@ body.dark-mode .contact{
 
 .contact-info h3{
     font-size: 3rem;
-    color: var(--black);
+    color: var(--textLight);
 }
 
 body.dark-mode .contact-info h3{
-    color: var(--white);
+    color: var(--textDark);
 }
 
 .contact-info > p{
     font-size: 1.6rem;
-    color: var(--black);
+    color: var(--textLight);
     padding: 0.5rem 0;
 }
 
 body.dark-mode .contact-info > p{
-    color: var(--white);
+    color: var(--textDark);
 }
 
 .contact-info .info-item{
@@ -1444,11 +1495,11 @@ body.dark-mode .contact-info > p{
 
 .contact-info .info-item h4{
     font-size: 1.8rem;
-    color: var(--black);
+    color: var(--textLight);
 }
 
 body.dark-mode .contact-info h4{
-    color: var(--white);
+    color: var(--textDark);
 }
 
 .contact-info .info-item .detail{
@@ -1463,7 +1514,7 @@ body.dark-mode .contact-info h4{
 .contact-info .info-item .detail .fas,
 .contact-info .info-item .detail .fab{
     border-radius: 50%;
-    color: var(--green);
+    color: var(--primaryLight);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;;
@@ -1478,13 +1529,13 @@ body.dark-mode .contact-info h4{
 
 .contact-info .info-item .detail p{
     font-size: 1.6rem;
-    color: var(--black);
+    color: var(--textLight);
     line-height: 1.6;
     padding-left: 1rem;
 }
 
 body.dark-mode .contact-info .info-item .detail p {
-    color: var(--white);
+    color: var(--textDark);
 }
 
 .contact-form{
@@ -1496,35 +1547,38 @@ body.dark-mode .contact-info .info-item .detail p {
 .contact-form .box{
     width: 100%;
     text-transform: none;
-    color: var(--black);
+    color: var(--textLight);
     font-size: 1.6rem;
-    border: 0.1rem solid var(--grey);
+    border: 0.1rem solid var(--opacityPlight);
     padding: 1.5rem;
     margin: 0.5rem 0;
-    background-color: var(--grey);
+    background-color: var(--opacitySLight);
     border-bottom-width: unset;
 }
 
 body.dark-mode .contact-form .box {
-    color: var(--white);
-    border: 0.1rem solid var(--black);
-    background-color: var(--gray-background);
+    color: var(--textDark);
+    border: 0.1rem solid var(--opacityPDark);
+    background-color: var(--opacitySDark);
+    padding: 1.5rem;
+    margin: 0.5rem 0;
+    border-bottom-width: unset;
 }
 
 .contact-form .box:focus{
-    border-color: var(--black);
+    border-color: var(--textLight);
 }
 
 body.dark-mode .contact-form .box:focus {
-    border-color: var(--white) ;
+    border-color: var(--textDark) ;
 }
 
 .contact-form .box::placeholder{
-    color: var(--black);
+    color: var(--textLight);
 }
 
 body.dark-mode .contact-form .box::placeholder {
-    color: var(--white);
+    color: var(--textDark);
 }
 
 .contact-form textarea{
@@ -1542,9 +1596,13 @@ body.dark-mode .contact-form .box::placeholder {
 
 /*--------------------- 12- Footer Area CSS (Start) ---------------------*/
 footer{
-    background-color: var(--green);
+    background-color: var(--primaryLight);
     padding: 2rem 0;
     text-align: center;
+}
+
+body.dark-mode footer {
+    background-color: var(--primaryDark);
 }
 
 footer .social{
@@ -1558,11 +1616,11 @@ footer .social{
 }
 
 footer .social .fab{
-    background-color: var(--black);
+    background-color: var(--textLight);
     border-radius: 50%;
     height: 4rem;
     width: 4rem;
-    color: var(--white);
+    color: var(--backgroundLight);
     font-size: 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1577,17 +1635,17 @@ footer .social .fab{
 }
 
 footer .social .fab:hover{
-    color: var(--black);
-    background-color: var(--white);
+    color: var(--textLight);
+    background-color: var(--backgroundLight);
 }
 
 footer .content p{
     font-size: 2rem;
-    color: var(--white);
+    color: var(--backgroundLight);
 }
 
 footer .content p span{
-    color: var(--black);
+    color: var(--textLight);
 }
 
 /*--------------------- 12- Footer Area CSS (End) ---------------------*/
@@ -1603,9 +1661,9 @@ footer .content p span{
     width: 5rem;
     font-size: 3rem;
     font-weight:lighter;
-    background: var(--black);
-    color: var(--white);
-    border: 0.2rem solid var(--white);
+    background: var(--textLight);
+    color: var(--backgroundLight);
+    border: 0.2rem solid var(--backgroundLight);
     border-radius: 50%;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
@@ -1624,8 +1682,8 @@ footer .content p span{
 }
 
 .scroll-top:hover{
-    background: var(--white);
-    color:var(--black);
+    background: var(--backgroundLight);
+    color:var(--textLight);
 }
 
 /*--------------------- 13- Scroll-Top (End) ---------------------*/

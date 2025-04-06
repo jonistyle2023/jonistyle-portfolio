@@ -17,6 +17,13 @@
     font-size: 5rem;
 }
 
+@media (max-width: 480px) {
+    .blog-content h1 {
+        line-height: 1.1; /* Reduce el espacio entre líneas */
+        text-align: center; /* Por si quieres centrar en móviles también */
+    }
+}
+
 .blog-loader {
     display: flex;
     justify-content: center;
@@ -27,10 +34,15 @@
 .loader {
     height: 9px;
     width: 60px;
-    --c:no-repeat linear-gradient(#00c27a 0 0);
+    --c:no-repeat linear-gradient(var(--acentLight) 0 0);
     background: var(--c), var(--c), var(--c), var(--c);
     background-size: 26% 3px;
-    animation: l2 1s infinite;
+    animation: l2 3s infinite;
+}
+body.dark-mode .loader {
+    --c:no-repeat linear-gradient(var(--acentDark) 0 0);
+    background: var(--c), var(--c), var(--c), var(--c);
+    background-size: 26% 3px;
 }
 @keyframes l2 {
     0%,
@@ -62,17 +74,39 @@
     justify-content: center;
 }
 
+body.dark-mode .blog-content h1 {
+    color: var(--textDark);
+}
+
 .blog-content h2 {
     display: flex;
     justify-content: start;
-    margin: .5rem;
+    color: var(--textLight);
+}
+
+body.dark-mode .blog-content h2 {
+    color: var(--textDark);
+}
+
+.blog-content h3 {
+    display: flex;
+    justify-content: start;
+    color: var(--textLight);
+}
+
+body.dark-mode .blog-content h3 {
+    color: var(--textDark);
 }
 
 .blog-content p {
     font-size: 1.6rem;
-    color: var(--black);
+    color: var(--textLight);
     line-height: 1.6;
     margin: .5rem;
+}
+
+body.dark-mode .blog-content p {
+    color: var(--textDark);
 }
 
 .info-blog {
@@ -100,7 +134,7 @@
 
 .detail i {
     font-size: 16px; /* Tamaño de icono */
-    color: #00c27a; /* Cambia el color si deseas */
+    color: var(--primaryLight); /* Cambia el color si deseas */
 }
 
 p {
@@ -115,16 +149,20 @@ p {
 }
 
 .quote-box {
-    color: var(--black);  /* Color del texto */
+    color: var(--textLight);  /* Color del texto */
     padding: 1.5rem;
-    border-left: 4px solid var(--green); /* Borde verde en la izquierda */
+    border-left: 4px solid var(--primaryLight); /* Borde verde en la izquierda */
     border-radius: 6px;  /* Bordes redondeados */
-    max-width: 600px; /* Ajustar el ancho si es necesario */
+    background-color: var(--opacitySLight);
+}
+body.dark-mode .quote-box {
+    border-left: 4px solid var(--primaryDark); /* Borde verde en la izquierda */
+    background-color: var(--opacitySDark);
 }
 
 .italic {
     font-style: italic; /* Texto en cursiva */
-    color: var(--green); /* Color verde para destacar */
+    color: var(--primaryLight); /* Color verde para destacar */
 }
 
 .image-container {
@@ -145,7 +183,7 @@ p {
     gap: 10px; /* Espacio entre los botones */
     justify-content: flex-start; /* Centra los botones */
     -webkit-box-pack: center;
-    margin-top: 3rem;
+    margin-top: 4rem;
     margin-block-end: 1rem;
 }
 
@@ -153,18 +191,33 @@ p {
     display: inline-flex; /* Hace que se ajusten al contenido */
     align-items: flex-start; /* Alineación vertical */
     padding: 1px 15px; /* Espaciado interno */
-    border: 2px solid #00c27a; /* Borde verde */
-    color: #00c27a; /* Texto verde */
+    border: 2px solid var(--primaryLight); /* Borde verde */
+    border-radius: 5px;
+    color: var(--primaryLight); /* Texto verde */
     font-size: 14px;
     font-weight: bold;
     text-transform: lowercase;
     transition: 0.3s ease-in-out;
     cursor: pointer;
+    white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+    .tag-container {
+        gap: 6px;
+        flex-wrap: wrap; /* permite que se ajusten si no entran en una sola línea */
+        justify-content: center; /* centra los botones en pantallas pequeñas */
+    }
+
+    .tag {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
 }
 
 .tag:hover {
-    background-color: #00c27a;
-    color: black;
+    background-color: var(--primaryLight);
+    color: var(--opacitySLight);
 }
 
 .blog-social {
@@ -177,16 +230,23 @@ p {
 .loader-share {
     height: 3px;
     width: 60px;
-    background: linear-gradient(#000 0 0) right/51% 100% no-repeat;
+    background: linear-gradient(var(--textLight) 0 0) right/51% 100% no-repeat;
     display: flex;
-    animation: l10-0 2s linear infinite;
+    animation: l10-0 4s linear infinite;
+}
+body.dark-mode .loader-share {
+    background: linear-gradient(var(--opacityPDark) 0 0) right/51% 100% no-repeat;
 }
 .loader-share:before,
 .loader-share:after {
     content: "";
     width: 15px;
-    background: #000;
+    background: var(--acentLight);
     animation: l10-1 2s linear infinite;
+}
+body.dark-mode .loader-share:before,
+.loader-share:after {
+    background-color: var(--acentDark);
 }
 .loader-share:after {
     animation-delay: -1s;
@@ -202,21 +262,101 @@ p {
     50%,100%{transform:scaleX(-1)}
 }
 
+.blog-social .fab {
+    color: var(--textLight);
+}
+
+body.dark-mode .blog-social .fab {
+    color: var(--textDark);
+}
+
+.blog-social .fa-brands {
+    color: var(--textLight);
+}
+
+body.dark-mode .blog-social .fa-brands {
+    color: var(--textDark);
+}
+
+.blog-social .fa-regular {
+    color: var(--textLight);
+}
+
+body.dark-mode .blog-social .fa-regular {
+    color: var(--textDark);
+}
+
+.blog-social .fab:hover {
+    color: var(--primaryLight);
+    transform: scale(1.2);
+}
+
+body.dark-mode .blog-social .fab:hover {
+    color: var(--primaryDark);
+    transform: scale(1.2);
+}
+
+.blog-social .fa-brands:hover {
+    color: var(--primaryLight);
+    transform: scale(1.2);
+}
+
+body.dark-mode .blog-social .fa-brands:hover {
+    color: var(--primaryDark);
+    transform: scale(1.2);
+}
+
+.blog-social .fa-regular:hover {
+    color: var(--primaryLight);
+    transform: scale(1.2);
+}
+
+body.dark-mode .blog-social .fa-regular:hover {
+    color: var(--primaryDark);
+    transform: scale(1.2);
+}
+
+.hr-blog {
+    color: var(--opacitySLight);
+}
+
 .prev-container {
-    text-align: start; /* Centra el contenido */
+    display: flex;
+    justify-content: space-between; /* Separa a los extremos */
+    align-items: flex-start;
+    margin-top: 2rem;
+    gap: 20px;
 }
 
-.prev-link {
-    display: block; /* Hace que el enlace ocupe su propia línea */
-    margin-bottom: 10px; /* Espacio entre el enlace y el título */
-    color: #000; /* Color del texto */
-    text-decoration: none; /* Quita el subrayado del enlace */
-    font-size: 16px; /* Tamaño del texto */
-    font-weight: normal; /* Grosor del texto */
+.prev, .next {
+    max-width: 45%;
 }
 
-.title {
-    font-size: 24px; /* Tamaño del título */
-    font-weight: bold; /* Grosor del título */
-    margin: 0; /* Elimina el margen predeterminado del h1 */
+.prev-link, .next-link {
+    display: block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--primaryLight);
+    margin-top: -1.5rem;
+}
+
+@media (max-width: 480px) {
+    .prev-container h3 {
+        display: none;
+    }
+}
+
+body.dark-mode .prev-link, .next-link {
+    color: var(--primaryDark);
+}
+
+.next-link {
+    display: flex;
+    justify-content: flex-end; /* Alinea a la derecha */
+}
+
+.title-previous, .title-next {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -25px;
 }

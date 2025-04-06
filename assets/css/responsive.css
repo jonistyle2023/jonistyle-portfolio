@@ -14,7 +14,7 @@
     }
 
     body.dark-mode header #menu-btn{
-        color: var(--white);
+        color: var(--textDark);
     }
 
     .header .navbar{
@@ -38,8 +38,8 @@
     }
 
     body.dark-mode .header .navbar{
-        background: var(--black);
-        border: 0.1rem solid var(--teal);
+        background: var(--backgroundDark);
+        border: 0.1rem solid var(--primaryDark);
     }
 
     .header .navbar.active{
