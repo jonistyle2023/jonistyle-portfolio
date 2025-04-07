@@ -25,8 +25,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'jonathanpan22@gmail.com';          // <- CAMBIA ESTO
-        $mail->Password   = 'lzkddxkiwsxsttig';            // <- CONTRASEÑA DE APLICACIÓN
+        $mail->Username   = $_ENV['MAIL_USERNAME'];          // <- CAMBIA ESTO
+        $mail->Password   = $_ENV['MAIL_PASSWORD'];            // <- CONTRASEÑA DE APLICACIÓN
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 
