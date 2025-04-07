@@ -244,10 +244,14 @@ body.dark-mode .loader-share {
     background: var(--acentLight);
     animation: l10-1 2s linear infinite;
 }
-body.dark-mode .loader-share:before,
-.loader-share:after {
+body.dark-mode .loader-share:before {
     background-color: var(--acentDark);
 }
+
+body.dark-mode .loader-share:after {
+    background-color: var(--acentDark);
+}
+
 .loader-share:after {
     animation-delay: -1s;
     --s:-1;
@@ -318,9 +322,18 @@ body.dark-mode .blog-social .fa-regular:hover {
 
 .hr-blog {
     color: var(--opacitySLight);
+    margin-block-end: 1.5rem;
 }
 
-.prev-container {
+.prev-container_blog1 {
+    display: flex;
+    justify-content: end; /* Separa a los extremos */
+    align-items: flex-start;
+    margin-top: 2rem;
+    gap: 20px;
+}
+
+.prev-container_blog2 {
     display: flex;
     justify-content: space-between; /* Separa a los extremos */
     align-items: flex-start;
@@ -332,12 +345,12 @@ body.dark-mode .blog-social .fa-regular:hover {
     max-width: 45%;
 }
 
-.prev-link, .next-link {
+.prev-link,
+.next-link {
     display: block;
     text-decoration: none;
     font-size: 1.5rem;
     color: var(--primaryLight);
-    margin-top: -1.5rem;
 }
 
 @media (max-width: 480px) {

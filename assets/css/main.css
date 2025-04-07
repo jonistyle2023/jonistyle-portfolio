@@ -17,7 +17,7 @@
     --opacityPDark: #0c271f;
     --secondaryDark: #203469;
     --opacitySDark: #060a14;
-    --acentDark: #0058e6;
+    --acentDark: #0db1fd;
 
 }
 
@@ -860,6 +860,7 @@ body.dark-mode .experience-item {
 }
 
 body.dark-mode .experience-item i {
+    color: var(--backgroundDark);
     background: var(--acentDark);
 }
 
