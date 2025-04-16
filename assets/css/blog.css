@@ -373,3 +373,20 @@ body.dark-mode .prev-link, .next-link {
     font-weight: bold;
     margin-top: -25px;
 }
+
+@media (max-width: 480px) {
+    .prev-container_blog2 .prev h3 {
+        display: none;
+    }
+}
+@media (max-width: 480px) {
+    .prev-container_blog2 .next h3 {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .next .title-next {
+        display: none;
+    }
+}
