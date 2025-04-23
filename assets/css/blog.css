@@ -353,6 +353,18 @@ body.dark-mode .blog-social .fa-regular:hover {
     color: var(--primaryLight);
 }
 
+.blog-social span {
+    display: none;
+    margin-left: 1rem;
+    color: var(--acentLight);
+}
+
+body.dark-mode .blog-social span {
+    display: none;
+    margin-left: 1rem;
+    color: var(--acentDark);
+}
+
 @media (max-width: 480px) {
     .prev-container h3 {
         display: none;

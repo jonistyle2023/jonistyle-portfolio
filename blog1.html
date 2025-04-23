@@ -162,11 +162,12 @@
         <div class="blog-social">
             <h3 class="share-title">Share</h3>
             <div class="loader-share"></div>
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-x-twitter"></a>
-            <a href="#" class="fa-brands fa-pinterest"></a>
-            <a href="#" class="fa-brands fa-whatsapp"></a>
-            <a href="#" class="fa-regular fa-copy"></a>
+            <a href="#" id="share-facebook" class="fab fa-facebook-f" target="_blank"></a>
+            <a href="#" id="share-twitter" class="fab fa-x-twitter" target="_blank"></a>
+            <a href="#" id="share-pinterest" class="fab fa-pinterest" target="_blank"></a>
+            <a href="#" id="share-whatsapp" class="fab fa-whatsapp" target="_blank"></a>
+            <a href="#" id="copy-link" class="fa-regular fa-copy" title="Copiar enlace"></a>
+            <span id="copy-message">¡Enlace copiado!</span>
         </div>
         <hr class="hr-blog">
 
@@ -235,6 +236,34 @@
                 document.body.classList.add('dark-mode');
             }
         });
+
+        document.getElementById("copy-link").addEventListener("click", function (e) {
+            e.preventDefault(); // evita que recargue si el <a> tiene href="#"
+
+            const blogUrl = window.location.href;
+
+            navigator.clipboard.writeText(blogUrl).then(() => {
+                // Mostrar el mensaje de "copiado"
+                const message = document.getElementById("copy-message");
+                message.style.display = "inline";
+
+                // Ocultar el mensaje después de 2 segundos
+                setTimeout(() => {
+                    message.style.display = "none";
+                }, 2000);
+            }).catch((err) => {
+                console.error("Error al copiar: ", err);
+            });
+        });
+
+        const pageUrl = encodeURIComponent(window.location.href);
+        const text = encodeURIComponent("¡Mira este blog interesante!");
+
+        document.getElementById("share-facebook").href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+        document.getElementById("share-twitter").href = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${text}`;
+        document.getElementById("share-pinterest").href = `https://pinterest.com/pin/create/button/?url=${pageUrl}&media=&description=${text}`;
+        document.getElementById("share-whatsapp").href = `https://api.whatsapp.com/send?text=${text}%20${pageUrl}`;
+
     </script>
 
 </body>
