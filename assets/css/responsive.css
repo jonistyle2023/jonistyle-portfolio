@@ -320,3 +320,28 @@
         padding: 2rem 1rem;
     }
 }
+
+@media (max-width: 800px) {
+    .scrolldown {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .scrolldown {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .cursor-two {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .cursor {
+        display: none;
+    }
+}
+

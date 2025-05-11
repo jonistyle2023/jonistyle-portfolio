@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!---- Title ---->
-    <title>jonistyle | Personal Portfolio</title>
+    <title>Jonathan David</title>
+    <link rel="icon" type="image/svh+xml" href="assets/images/logo-page.svg">
 
     <!---- Font-Awesome CSS ---->
     <link rel="stylesheet" href="assets/vendors/font-awesome/css/all.min.css">
@@ -19,6 +20,7 @@
     <!---- Custom Stylesheets ---->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
 
 </head>
 <body>
@@ -29,6 +31,10 @@
 </a>
 <!-------------------- Scroll-Top Area (End) -------------------->
 
+<div class="cursor scale"></div>
+<div class="cursor-two   scale"></div>
+
+<div id="particles"></div>
 
 <!-------------------- Header Area (Start) -------------------->
 <header class="header">
@@ -169,6 +175,13 @@
             </div>
         </div>
         <!---------------  Animation Profile Circle (End)  --------------->
+
+        <div class="scrolldown" style="--color: skyblue">
+            <div class="chevrons">
+                <div class="chevrondown"></div>
+                <div class="chevrondown"></div>
+            </div>
+        </div>
 
     </div>
 
@@ -823,6 +836,83 @@
 <script src="assets/js/portfolio.js"></script>
 <script src="assets/js/testi-slider.js"></script>
 <script src="assets/js/blog-slider.js"></script>
+<script src="assets/js/particles.js"></script>
+<script src="assets/js/particles.min.js"></script>
+
+<script>
+    function initParticles() {
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        const color = isDarkMode ? '#0db1fd' : '#75aaff';
+
+        particlesJS("particles", {
+            "particles": {
+                "number": {
+                    "value": 40,
+                    "density": {"enable": true, "value_area": 800}
+                },
+                "color": {"value": color}, // Usa la variable color
+                "shape": {
+                    "type": "circle",
+                    "stroke": {"width": 0, "color": color}, // Usa la variable color
+                    "polygon": {"nb_sides": 5},
+                    "image": {"src": "img/github.svg", "width": 100, "height": 100}
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {"enable": false, "speed": 1, "opacity_min": 0.1, "sync": false}
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {"enable": false, "speed": 40, "size_min": 0.1, "sync": false}
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": color, // Usa la variable color
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {"enable": false, "rotateX": 600, "rotateY": 1200}
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {"enable": true, "mode": "repulse"},
+                    "onclick": {"enable": true, "mode": "push"},
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {"distance": 400, "line_linked": {"opacity": 1}},
+                    "bubble": {"distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3},
+                    "repulse": {"distance": 200, "duration": 0.4},
+                    "push": {"particles_nb": 4},
+                    "remove": {"particles_nb": 2}
+                }
+            },
+            "retina_detect": true
+        });
+    }
+
+    // Inicializa particlesJS al cargar la página
+    initParticles();
+
+    // Escucha cambios de tema
+    document.getElementById('switch').addEventListener('click', () => {
+        // Reinicia particlesJS con el nuevo tema
+        initParticles();
+    });
+</script>
 
 <!---------------- Custom Script ---------------->
 
