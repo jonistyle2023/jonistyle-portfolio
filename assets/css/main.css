@@ -406,6 +406,7 @@ body.dark-mode #sidebar i {
     background-size: cover;
     background-position: 50% 50%;
     display: block;
+    z-index: -1;
 }
 
 /*--------------------- 4- Home Area CSS (Start) ---------------------*/
