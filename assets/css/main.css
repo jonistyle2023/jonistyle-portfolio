@@ -940,7 +940,7 @@ body.dark-mode .skill-item .box .progress-bar span {
 /*--------------------- 6- Qualification Area CSS (Start) ---------------------*/
 
 .qualification{
-    background-image: url('../images/Backgrounds/Light/qualification.png');
+    background-image: url("../images/Backgrounds/Light/qualification.png");
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -948,7 +948,7 @@ body.dark-mode .skill-item .box .progress-bar span {
 }
 
 body.dark-mode .qualification {
-    background-image: url('../images/Backgrounds/dark/qualificationDark.png');
+    background-image: url("../images/Backgrounds/dark/qualificationDark.png");
 }
 
 .qualification .box-container{
