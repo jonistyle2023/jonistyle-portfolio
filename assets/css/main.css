@@ -687,7 +687,7 @@ body.dark-mode .scrolldown::before {
 
 /*--------------------- 5- About Area CSS (Start) ---------------------*/
 .about{
-    background-image: url("./assets/images/Backgrounds/Light/resume.png");
+    background-image: url("../images/Backgrounds/Light/resume.png");
     background-size: cover;
     background-position: center 1px;
     background-repeat: no-repeat;
@@ -695,7 +695,7 @@ body.dark-mode .scrolldown::before {
 }
 
 body.dark-mode .about {
-    background-image: url("./assets/images/Backgrounds/dark/resumeDark.png");
+    background-image: url("../images/Backgrounds/dark/resumeDark.png");
 }
 
 .about .box-container{
