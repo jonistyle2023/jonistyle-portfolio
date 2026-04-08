@@ -3,63 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!---- Title ---->
     <title>Jonathan David</title>
     <link rel="icon" type="image/svh+xml" href="assets/images/logo-page.svg">
-
-    <!---- Font-Awesome CSS ---->
     <link rel="stylesheet" href="assets/vendors/font-awesome/css/all.min.css">
-
-    <!---- Swiper CSS ---->
     <link rel="stylesheet" href="assets/vendors/swiper/swiper.css">
-
-    <!---- Magnific-Popup CSS ---->
     <link rel="stylesheet" href="assets/vendors/magnific-popup/magnific-popup.css">
-
-    <!---- Custom Stylesheets ---->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
-
 </head>
 <body>
-
-<!-------------------- Scroll-Top Area (Start) -------------------->
 <a href="#home" class="scroll-top">
     <i class="fas fa-angle-up"></i>
 </a>
-<!-------------------- Scroll-Top Area (End) -------------------->
 
 <div class="cursor scale"></div>
 <div class="cursor-two   scale"></div>
 
 <div id="particles"></div>
 
-<!-------------------- Header Area (Start) -------------------->
 <header class="header">
-    <! -- Logo -->
     <div class="logo">
         <a href="#home">
-            <!-- Logo claro (visible por defecto) -->
             <img class="logo-light" src="assets/images/mylogo(light).svg" alt="logo claro"/>
-            <!-- Logo oscuro (oculto por defecto) -->
             <img class="logo-dark" src="assets/images/mylogo(dark).svg" alt="logo oscuro"/>
         </a>
     </div>
-    <! -- Logo End -->
-    <! -- Navbar -->
+
     <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">Resume</a>
-        <a href="#service">Service</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#testimonial">Testimonial</a>
-        <a href="#blog">Blogs</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" data-i18n="nav.home">Home</a>
+        <a href="#about" data-i18n="nav.resume">Resume</a>
+        <a href="#service" data-i18n="nav.service">Service</a>
+        <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="#testimonial" data-i18n="nav.testimonial">Testimonial</a>
+        <a href="#blog" data-i18n="nav.blogs">Blogs</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
 
-    <! -- Light Mode - Dark Mode Start -->
+    <div class="header-buttons">
+
     <div class="button-dark">
         <label class="toggle" for="switch">
             <input id="switch" class="input" type="checkbox">
@@ -78,19 +60,18 @@
             </div>
         </label>
     </div>
-    <! -- Light Mode - Dark Mode End -->
+    
+        <button id="lang-btn">ES</button>
 
-    <! -- Menubar -->
-    <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
 
 </header>
-<!-------------------- Header Area (End) -------------------->
-
 
 <!-------------------- SideBar Area (Start) -------------------->
 <div ID="sidebar">
     <div class="follow-me">
-        <p>Follow Me</p>
+        <p data-i18n="sidebar.follow">Follow Me</p>
         <hr class="separator">
     </div>
     <a href="https://www.facebook.com/jonathan.panchana.7" target="facebook">
@@ -119,11 +100,11 @@
 
         <div class="content">
             <div class="text">
-                <h2>Hi there!</h2>
-                <h1>I Am a <span class="typing-text"></span></h1>
-                <p>IT Engineer, with more than 3 years of experience in software development and design, taking from the
+                <h2 data-i18n="home.greeting">Hi there!</h2>
+                <h1><span data-i18n="home.iam">I Am a </span><span class="typing-text"></span></h1>
+                <p data-i18n="home.description">IT Engineer, with more than 3 years of experience in software development and design, taking from the
                     complex to the simple.</p>
-                <a href="#" class="btn">About me <i class="fas fa-user"></i></a>
+                <a href="#portfolio" class="btn" data-i18n="home.button">View my work <i class="fas fa-briefcase"></i></a>
             </div>
         </div>
 
@@ -131,7 +112,7 @@
         <div class="animation-circle">
 
             <div class="image">
-                <img src="assets/images/Home/Home-Image.png" alt="Home-Image"/>
+                <img src="assets/images/Home/Home-Image.webp" alt="Home-Image"/>
             </div>
 
             <div class="profile">
@@ -188,53 +169,51 @@
 </section>
 <!-------------------- Home Area (End) -------------------->
 
-
 <!-------------------- About Area (Start) -------------------->
 <section class="about" id="about">
 
     <div class="box-container">
 
         <div class="image">
-            <img src="assets/images/About/About-Image.png" alt="About-Image">
+            <img src="assets/images/About/About-Image.webp" alt="About-Image">
         </div>
 
         <div class="content">
 
-            <h2>Who am i?</h2>
-            <p>Hi! I'm Jonathan, but you can call me Jonistyle. I'm an IT engineer and software
+            <h2 data-i18n="about.title">Who am i?</h2>
+            <p data-i18n="about.description">Hi! I'm Jonathan, but you can call me Jonistyle. I'm an IT engineer and software
                 developer with experience in full-stack development, user experience (UX) and user
                 interface (UI) design in Figma, and a bit of virtual reality and 3D design.</p>
 
             <div class="about-info">
 
                 <div class="info">
-                    <h4>Age: <span>25</span></h4>
-                    <h4>Gender: <span>Male</span></h4>
-                    <h4>From: <span>Salinas, Ecuador</span></h4>
-                    <h4>Email: <span>jonathanpan22@gmail.com</span></h4>
-                    <a href="#" class="btn">Download CV <i class="fas fa-download"></i></a>
+                    <h4 data-i18n="about.age">Age: <span>25</span></h4>
+                    <h4 data-i18n="about.from">From: <span>Salinas, Ecuador</span></h4>
+                    <h4 data-i18n="about.email">Email: <span>jonathanpan22@gmail.com</span></h4>
+                    <a href="#" class="btn" data-i18n="about.download_cv">Download CV <i class="fas fa-download"></i></a>
                 </div>
 
                 <div class="counting">
 
                     <div class="box">
                         <h1 class="count" data-count="4">4+</h1>
-                        <h3>Years of Experience</h3>
+                        <h3 data-i18n="about.years_exp">Years of Experience</h3>
                     </div>
 
                     <div class="box">
                         <h1 class="count" data-count="21">21+</h1>
-                        <h3>Projects completed</h3>
+                        <h3 data-i18n="about.projects_comp">Projects completed</h3>
                     </div>
 
                     <div class="box">
                         <h1 class="count" data-count="15">15+</h1>
-                        <h3>Happy Clients</h3>
+                        <h3 data-i18n="about.happy_clients">Happy Clients</h3>
                     </div>
 
                     <div class="box">
                         <h1 class="count" data-count="12">12+</h1>
-                        <h3>Awards Son</h3>
+                        <h3 data-i18n="about.awards_won">Awards Won</h3>
                     </div>
 
                 </div>
@@ -248,7 +227,7 @@
     <div class="skill-container">
 
         <div class="heading">
-            <h2>My <span>Skills</span></h2>
+            <h2 data-i18n="skills.title">My <span>Skills</span></h2>
         </div>
 
         <div class="skills">
@@ -293,12 +272,11 @@
 </section>
 <!-------------------- About Area (End) -------------------->
 
-
 <!-------------------- Qualification Area (Start) -------------------->
 <section class="qualification">
 
     <div class="heading">
-        <h2>My <span>Qualification</span></h2>
+        <h2 data-i18n="qual.title">My <span>Qualification</span></h2>
     </div>
 
     <div class="box-container">
@@ -309,8 +287,8 @@
                 <i class="fas fa-graduation-cap"></i>
                 <div class="content">
                     <span>2019 - 2023</span>
-                    <h3>IT engineering</h3>
-                    <p>UTPL, here I have received several recognitions for my outstanding performance as a student,
+                    <h3 data-i18n="qual.edu1.title">IT engineering</h3>
+                    <p data-i18n="qual.edu1.desc">UTPL, here I have received several recognitions for my outstanding performance as a student,
                         here I acquired the solid skills that I possess today.</p>
                 </div>
             </div>
@@ -319,8 +297,8 @@
                 <i class="fas fa-graduation-cap"></i>
                 <div class="content">
                     <span>2024 - current</span>
-                    <h3>software engineering</h3>
-                    <p>UPSE, here I obtained solid skills to create functional software to automate processes and
+                    <h3 data-i18n="qual.edu2.title">software engineering</h3>
+                    <p data-i18n="qual.edu2.desc">UPSE, here I obtained solid skills to create functional software to automate processes and
                         provide solutions to business problems.</p>
                 </div>
             </div>
@@ -329,8 +307,8 @@
                 <i class="fas fa-graduation-cap"></i>
                 <div class="content">
                     <span>2023 - Current</span>
-                    <h3>cybersecurity</h3>
-                    <p>CISCO, I am currently taking courses at this academy in order to prepare myself and obtain
+                    <h3 data-i18n="qual.edu3.title">cybersecurity</h3>
+                    <p data-i18n="qual.edu3.desc">CISCO, I am currently taking courses at this academy in order to prepare myself and obtain
                         a certification in this field.</p>
                 </div>
             </div>
@@ -343,8 +321,8 @@
                 <i class="fas fa-briefcase"></i>
                 <div class="content">
                     <span>2022 - 2023</span>
-                    <h3>IT technician</h3>
-                    <p>Santa Elena GAD, Here I took my first tests in the world of work, in my town in order to test
+                    <h3 data-i18n="qual.exp1.title">IT technician</h3>
+                    <p data-i18n="qual.exp1.desc">Santa Elena GAD, Here I took my first tests in the world of work, in my town in order to test
                         the knowledge acquired in my career.</p>
                 </div>
             </div>
@@ -353,8 +331,8 @@
                 <i class="fas fa-briefcase"></i>
                 <div class="content">
                     <span>2023 - 2024</span>
-                    <h3>IT specialist</h3>
-                    <p>Provincial Government of Santa Elena: once again in charge of the IT area but this time helping
+                    <h3 data-i18n="qual.exp2.title">IT specialist</h3>
+                    <p data-i18n="qual.exp2.desc">Provincial Government of Santa Elena: once again in charge of the IT area but this time helping
                         with software quality management, while also carrying out projects.</p>
                 </div>
             </div>
@@ -363,8 +341,8 @@
                 <i class="fas fa-briefcase"></i>
                 <div class="content">
                     <span>2024 - current</span>
-                    <h3>UI /UX designer</h3>
-                    <p>UTPL Science and Technology Park, I was selected to belong to this academy and contribute with
+                    <h3 data-i18n="qual.exp3.title">UI /UX designer</h3>
+                    <p data-i18n="qual.exp3.desc">UTPL Science and Technology Park, I was selected to belong to this academy and contribute with
                         my graphic design skills to the creation of prototypes and user interfaces.</p>
                 </div>
             </div>
@@ -375,50 +353,49 @@
 </section>
 <!-------------------- Qualification Area (End) -------------------->
 
-
 <!-------------------- Services Area (Start) -------------------->
 <section class="service" id="service">
 
     <div class="heading">
-        <h2>My <span>Services</span></h2>
+        <h2 data-i18n="serv.title">My <span>Services</span></h2>
     </div>
 
     <div class="box-container">
 
         <div class="service-item">
             <i class="fa-solid fa-window-restore"></i>
-            <h3>Web Development / Full-Stack Development</h3>
-            <p>What better than a website for your business, let me take care of it.</p>
+            <h3 data-i18n="serv.1.title">Web Development / Full-Stack Development</h3>
+            <p data-i18n="serv.1.desc">What better than a website for your business, let me take care of it.</p>
         </div>
 
         <div class="service-item">
             <i class="fa-solid fa-code"></i>
-            <h3>Backend & API Development</h3>
-            <p>Backend process automation and microservices.</p>
+            <h3 data-i18n="serv.2.title">Backend & API Development</h3>
+            <p data-i18n="serv.2.desc">Backend process automation and microservices.</p>
         </div>
 
         <div class="service-item">
             <i class="fas fa-headset"></i>
-            <h3>IT Consulting / Tech Solutions</h3>
-            <p>Consulting in software architecture, IT project optimization.</p>
+            <h3 data-i18n="serv.3.title">IT Consulting / Tech Solutions</h3>
+            <p data-i18n="serv.3.desc">Consulting in software architecture, IT project optimization.</p>
         </div>
 
         <div class="service-item">
             <i class="fa-solid fa-screwdriver-wrench"></i>
-            <h3>Software Maintenance & Optimization</h3>
-            <p>Code improvements, debugging, refactoring, updating legacy systems.</p>
+            <h3 data-i18n="serv.4.title">Software Maintenance & Optimization</h3>
+            <p data-i18n="serv.4.desc">Code improvements, debugging, refactoring, updating legacy systems.</p>
         </div>
 
         <div class="service-item">
             <i class="fa-solid fa-database"></i>
-            <h3>Database Management / Data Solutions</h3>
-            <p>Database design, optimization and migration.</p>
+            <h3 data-i18n="serv.5.title">Database Management / Data Solutions</h3>
+            <p data-i18n="serv.5.desc">Database design, optimization and migration.</p>
         </div>
 
         <div class="service-item">
             <i class="fa-solid fa-code-branch"></i>
-            <h3>DevOps Basics / Deployment Service</h3>
-            <p>Deployment of web apps on servers, basic configuration of cloud environments.</p>
+            <h3 data-i18n="serv.6.title">DevOps Basics / Deployment Service</h3>
+            <p data-i18n="serv.6.desc">Deployment of web apps on servers, basic configuration of cloud environments.</p>
         </div>
 
     </div>
@@ -426,69 +403,74 @@
 </section>
 <!-------------------- Services Area (End) -------------------->
 
-
 <!-------------------- Portfolio Area (Start) -------------------->
 <section class="portfolio" id="portfolio">
 
     <div class="heading">
-        <h2>My <span>Portfolio</span></h2>
+        <h2 data-i18n="port.title">My <span>Portfolio</span></h2>
     </div>
 
     <div class="gallery">
 
         <ul class="controls">
-            <li class="button btn active" data-filter="all">All</li>
-            <li class="button btn" data-filter="web">Web Development</li>
-            <li class="button btn" data-filter="design">Backend / API</li>
-            <li class="button btn" data-filter="photography">Full-Stack Projects</li>
+            <li class="button btn active" data-filter="all" data-i18n="port.filter.all">All</li>
+            <li class="button btn" data-filter="web" data-i18n="port.filter.web">Web Development</li>
+            <li class="button btn" data-filter="design" data-i18n="port.filter.backend">Backend / API</li>
+            <li class="button btn" data-filter="photography" data-i18n="port.filter.fullstack">Full-Stack Projects</li>
         </ul>
 
         <div class="box-container">
 
             <div class="portfolio-item image web">
-                <img src="assets/images/Portfolio/portfolio-1.png" alt="Portfolio-Image"/>
+                <img src="assets/images/Portfolio/portfolio-1.png" alt="Project-Screenshot"/>
                 <div class="content">
-                    <h4>Web Development</h4>
-                    <p>Category</p>
-                    <a data-effect="mfp-newspaper" href="assets/images/Portfolio/portfolio-1.png" class="view-btn"><i
-                            class="fas fa-search-plus"></i></a>
+                    <h4>WildLife Park</h4>
+                    <p>Next JS, Node.js, MongoDB</p>
+                    <div class="links" style="display: flex; gap: 10px; margin-top: 10px;">
+                        <a href="https://github.com/jonistyle2023/WildLife-Park" target="_blank" class="view-btn" title="View Code"><i class="fab fa-github"></i></a>
+                        <a href="https://v0.app/chat/zoo-park-interface-jheZ1nEJjRy?ref=LNCVX0" target="_blank" class="view-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
                 </div>
             </div>
 
             <div class="portfolio-item image web">
-                <img src="assets/images/Portfolio/portfolio-2.png" alt="Portfolio-Image"/>
+                <img src="assets/images/Portfolio/portfolio-2.png" alt="Project-Screenshot"/>
                 <div class="content">
-                    <h4>Web Development</h4>
-                    <p>Category</p>
-                    <a data-effect="mfp-newspaper" href="assets/images/Portfolio/portfolio-2.png" class="view-btn"><i
-                            class="fas fa-search-plus"></i></a>
+                    <h4>Online Store</h4>
+                    <p>HTML, CSS & JavaScript</p>
+                    <div class="links" style="display: flex; gap: 10px; margin-top: 10px;">
+                        <a href="https://github.com/jonistyle2023/Online-Store-Basic" target="_blank" class="view-btn" title="View Code"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" class="view-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
                 </div>
             </div>
 
             <div class="portfolio-item image design">
-                <img src="assets/images/Portfolio/portfolio-3.png" alt="Portfolio-Image"/>
+                <img src="assets/images/Portfolio/portfolio-3.png" alt="API Architecture"/>
                 <div class="content">
-                    <h4>Backend / API</h4>
-                    <p>Category</p>
-                    <a data-effect="mfp-newspaper" href="assets/images/Portfolio/portfolio-3.png" class="view-btn"><i
-                            class="fas fa-search-plus"></i></a>
+                    <h4>Holidays CRUD</h4>
+                    <p>Helidon SE, JSON-B, Docker</p>
+                    <div class="links" style="display: flex; gap: 10px; margin-top: 10px;">
+                        <a href="https://github.com/jonistyle2023/holidays-CRUD" target="_blank" class="view-btn" title="View Code"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
             </div>
 
             <div class="portfolio-item image design">
-                <img src="assets/images/Portfolio/portfolio-4.png" alt="Portfolio-Image"/>
+                <img src="assets/images/Portfolio/portfolio-4.png" alt="Database Schema"/>
                 <div class="content">
-                    <h4>Backend / API</h4>
-                    <p>Category</p>
-                    <a data-effect="mfp-newspaper" href="assets/images/Portfolio/portfolio-4.png" class="view-btn"><i
-                            class="fas fa-search-plus"></i></a>
+                    <h4>Web Inventory</h4>
+                    <p>SpringBoot, Java & MySQL</p>
+                    <div class="links" style="display: flex; gap: 10px; margin-top: 10px;">
+                         <a href="https://github.com/jonistyle2023/APIRESTfull" target="_blank" class="view-btn" title="View Code"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="portfolio-item image photography">
                 <img src="assets/images/Portfolio/portfolio-5.png" alt="Portfolio-Image"/>
                 <div class="content">
-                    <h4>Full-Stack Projects</h4>
-                    <p>Category</p>
+                    <h4>AsistApp</h4>
+                    <p>React, MySQL, Django</p>
                     <a data-effect="mfp-newspaper" href="assets/images/Portfolio/portfolio-5.png" class="view-btn"><i
                             class="fas fa-search-plus"></i></a>
                 </div>
@@ -497,8 +479,8 @@
             <div class="portfolio-item image photography">
                 <img src="assets/images/Portfolio/portfolio-6.png" alt="Portfolio-Image"/>
                 <div class="content">
-                    <h4>Full-Stack Projects</h4>
-                    <p>Category</p>
+                    <h4>SIPeIP</h4>
+                    <p>React, Tailwind CSS, MySQL, Django</p>
                     <a data-effect="mfp-newspaper" href="assets/images/Portfolio/portfolio-6.png" class="view-btn"><i
                             class="fas fa-search-plus"></i></a>
                 </div>
@@ -511,12 +493,11 @@
 </section>
 <!-------------------- Portfolio Area (End) -------------------->
 
-
 <!-------------------- Testimonials Area (Start) -------------------->
 <section class="testimonial" id="testimonial">
 
     <div class="heading">
-        <h2><span>Testimonials</span></h2>
+        <h2 data-i18n="test.title"><span>Testimonials</span></h2>
     </div>
 
     <div class="swiper-container testimonial-slider">
@@ -536,7 +517,7 @@
 
                 <div class="intro">
                     <h3>Jason Roy</h3>
-                    <h5>Web Developer</h5>
+                    <h5 data-i18n="test.role.web">Web Developer</h5>
                 </div>
             </div>
 
@@ -554,7 +535,7 @@
 
                 <div class="intro">
                     <h3>Evelyn Jones</h3>
-                    <h5>Freelancer</h5>
+                    <h5 data-i18n="test.role.free">Freelancer</h5>
                 </div>
             </div>
 
@@ -572,7 +553,7 @@
 
                 <div class="intro">
                     <h3>Luke Wood</h3>
-                    <h5>Graphic Designer</h5>
+                    <h5 data-i18n="test.role.graphic">Graphic Designer</h5>
                 </div>
             </div>
 
@@ -590,7 +571,7 @@
 
                 <div class="intro">
                     <h3>Sarah Glenn</h3>
-                    <h5>Freelancer</h5>
+                    <h5 data-i18n="test.role.free">Freelancer</h5>
                 </div>
             </div>
 
@@ -608,7 +589,7 @@
 
                 <div class="intro">
                     <h3>Aamit Patel</h3>
-                    <h5>Graphic Designer</h5>
+                    <h5 data-i18n="test.role.graphic">Graphic Designer</h5>
                 </div>
             </div>
 
@@ -620,12 +601,11 @@
 </section>
 <!-------------------- Testimonials Area (End) -------------------->
 
-
 <!-------------------- Blog Area (Start) -------------------->
 <section class="blog" id="blog">
 
     <div class="heading">
-        <h2>My <span>Blog</span></h2>
+        <h2 data-i18n="blog.title">My <span>Blog</span></h2>
     </div>
 
     <div class="swiper-container blog-slider">
@@ -640,11 +620,11 @@
                         <h5><i class="fas fa-calendar-alt"></i><span>1st jan, 2024</span></h5>
                         <h5><i class="fas fa-user"></i><span>by admin</span></h5>
                     </div>
-                    <a class="main-heading" href="#">AI in university studies</a>
+                <a class="main-heading" href="#" data-i18n="blog.1.title">AI in university studies</a>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                         Nam possimus modi.
                     </p>
-                    <a href="blog1.html" class="btn">Read more <i class="fas fa-arrow-right"></i></a>
+                <a href="blog1.html" class="btn" data-i18n="blog.read_more">Read more <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
 
@@ -657,10 +637,10 @@
                         <h5><i class="fas fa-calendar-alt"></i><span>24st apr, 2024</span></h5>
                         <h5><i class="fas fa-user"></i><span>by admin</span></h5>
                     </div>
-                    <a class="main-heading" href="#">Software vs IT engineering</a>
-                    <p>Software engineering vs. information technology engineering, which is better?.
+                <a class="main-heading" href="#" data-i18n="blog.2.title">Software vs IT engineering</a>
+                <p data-i18n="blog.2.desc">Software engineering vs. information technology engineering, which is better?.
                     </p>
-                    <a href="blog2.html" class="btn">Read more <i class="fas fa-arrow-right"></i></a>
+                <a href="blog2.html" class="btn" data-i18n="blog.read_more">Read more <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
 
@@ -673,10 +653,10 @@
                         <h5><i class="fas fa-calendar-alt"></i><span>22st may, 2024</span></h5>
                         <h5><i class="fas fa-user"></i><span>by admin</span></h5>
                     </div>
-                    <a class="main-heading" href="#">Math's in the IT world</a>
-                    <p>The importance of calculus in information and communication technology careers
+                <a class="main-heading" href="#" data-i18n="blog.3.title">Math's in the IT world</a>
+                <p data-i18n="blog.3.desc">The importance of calculus in information and communication technology careers
                     </p>
-                    <a href="blog3.html" class="btn">Read more <i class="fas fa-arrow-right"></i></a>
+                <a href="blog3.html" class="btn" data-i18n="blog.read_more">Read more <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
 
@@ -689,11 +669,11 @@
                         <h5><i class="fas fa-calendar-alt"></i><span>14st jul, 2024</span></h5>
                         <h5><i class="fas fa-user"></i><span>by admin</span></h5>
                     </div>
-                    <a class="main-heading" href="#">How to work from home</a>
+                <a class="main-heading" href="#" data-i18n="blog.4.title">How to work from home</a>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                         Nam possimus modi.
                     </p>
-                    <a href="blog4.html" class="btn">Read more <i class="fas fa-arrow-right"></i></a>
+                <a href="blog4.html" class="btn" data-i18n="blog.read_more">Read more <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
 
@@ -706,11 +686,11 @@
                         <h5><i class="fas fa-calendar-alt"></i><span>6st apr, 2025</span></h5>
                         <h5><i class="fas fa-user"></i><span>by admin</span></h5>
                     </div>
-                    <a class="main-heading" href="#">Study techniques for developers</a>
+                <a class="main-heading" href="#" data-i18n="blog.5.title">Study techniques for developers</a>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                         Nam possimus modi.
                     </p>
-                    <a href="blog5.html" class="btn">Read more <i class="fas fa-arrow-right"></i></a>
+                <a href="blog5.html" class="btn" data-i18n="blog.read_more">Read more <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
 
@@ -723,24 +703,23 @@
 </section>
 <!-------------------- Blog Area (End) -------------------->
 
-
 <!-------------------- Contact Area (Start) -------------------->
 <section class="contact" id="contact">
 
     <div class="heading">
-        <h2><span>Get in</span> Touch</h2>
+        <h2 data-i18n="contact.title"><span>Get in</span> Touch</h2>
     </div>
 
     <div class="box-container">
 
         <div class="contact-info">
 
-            <h3>Let's create something amazing together</h3>
+            <h3 data-i18n="contact.subtitle">Let's create something amazing together</h3>
 
-            <p>You can contact me, together we will create and take your ideas to another level.</p>
+            <p data-i18n="contact.desc">You can contact me, together we will create and take your ideas to another level.</p>
 
             <div class="info-item">
-                <h4>Phone:</h4>
+                <h4 data-i18n="contact.phone">Phone:</h4>
                 <div class="detail">
                     <div class="fas fa-phone"></div>
                     <p>+593-999-2427-51</p>
@@ -752,7 +731,7 @@
             </div>
 
             <div class="info-item">
-                <h4>Email:</h4>
+                <h4 data-i18n="contact.email">Email:</h4>
                 <div class="detail">
                     <div class="fas fa-envelope"></div>
                     <p class="gmail">jonathanpan22@gmail.com</p>
@@ -782,11 +761,11 @@
 
         <form method="post" class="contact-form" id="contactUs-Form" action="assets/php/submit.php">
 
-            <input type="text" name="name" class="box" id="name" placeholder="name" required/>
-            <input type="email" name="email" class="box" id="email" placeholder="email" required/>
-            <input type="text" name="subject" class="box" id="subject" placeholder="subject" required/>
-            <textarea cols="30" rows="10" name="comment" id="comment" class="box" placeholder="message"></textarea>
-            <button type="submit" class="btn" name="submit" id="submit">Send message</button>
+            <input type="text" name="name" class="box" id="name" data-i18n="contact.placeholder.name" placeholder="name" required/>
+            <input type="email" name="email" class="box" id="email" data-i18n="contact.placeholder.email" placeholder="email" required/>
+            <input type="text" name="subject" class="box" id="subject" data-i18n="contact.placeholder.subject" placeholder="subject" required/>
+            <textarea cols="30" rows="10" name="comment" id="comment" class="box" data-i18n="contact.placeholder.message" placeholder="message"></textarea>
+            <button type="submit" class="btn" name="submit" id="submit" data-i18n="contact.submit">Send message</button>
 
             <span class="alert" id="msg"></span>
 
@@ -796,7 +775,6 @@
 
 </section>
 <!-------------------- Contact Area (End) -------------------->
-
 
 <!-------------------- Footer Area (Start) -------------------->
 <footer>
@@ -808,7 +786,7 @@
     </div>
 
     <div class="content">
-        <p>created by <span>Jonistyle</span> | all rights reserved</p>
+        <p data-i18n="footer.text">created by <span>Jonistyle</span> | all rights reserved</p>
     </div>
 </footer>
 <!-------------------- Footer Area (End) -------------------->
@@ -939,12 +917,16 @@
 
 <!-- Typed Script -->
 <script>
-    var typed = new Typed('.typing-text', {
-
-        strings: ['Freelancer', 'Developer', 'Designer'],
-        typeSpeed: 120,
-        loop: true
-    });
+    var typedInstance;
+    function initTyped(lang) {
+        if (typedInstance) typedInstance.destroy();
+        const strings = lang === 'es' ? ['Freelancer', 'Desarrollador', 'Diseñador'] : ['Freelancer', 'Developer', 'Designer'];
+        typedInstance = new Typed('.typing-text', {
+            strings: strings,
+            typeSpeed: 120,
+            loop: true
+        });
+    }
 </script>
 
 <!-- Contact-Form Script -->
@@ -968,5 +950,44 @@
     });
 </script>
 
+<!-- Translations Script -->
+<script src="assets/js/translations.js"></script>
+
+<script>
+
+    let currentLang = localStorage.getItem('lang') || 'en';
+    const langBtn = document.getElementById('lang-btn');
+
+    function setLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('lang', lang);
+        langBtn.innerText = lang === 'en' ? 'ES' : 'EN';
+
+        // Buscar todas las etiquetas que tengan el atributo data-i18n
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang][key]) {
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    el.placeholder = translations[lang][key];
+                } else {
+                    el.innerHTML = translations[lang][key];
+                }
+            }
+        });
+
+        // Reiniciar Typed.js para el nuevo idioma
+        if (typeof initTyped === 'function') {
+            initTyped(lang);
+        }
+    }
+
+    // Evento para alternar el idioma
+    langBtn.addEventListener('click', () => {
+        setLanguage(currentLang === 'en' ? 'es' : 'en');
+    });
+
+    // Inicializar el idioma al cargar la página
+    setLanguage(currentLang);
+</script>
 </body>
 </html>

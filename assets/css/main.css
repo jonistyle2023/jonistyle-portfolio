@@ -259,6 +259,39 @@ body.dark-mode header #menu-btn:hover {
     color: var(--secondaryDark);
 }
 
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#lang-btn {
+    background: transparent;
+    color: var(--textLight);
+    border: 0.2rem solid var(--primaryLight);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#lang-btn:hover {
+    background: var(--primaryLight);
+    color: var(--backgroundLight);
+}
+
+body.dark-mode #lang-btn {
+    color: var(--textDark);
+    border: 0.2rem solid var(--primaryDark);
+}
+
+body.dark-mode #lang-btn:hover {
+    background: var(--primaryDark);
+    color: var(--backgroundDark);
+}
+
 /*--------------------- 3- Header Area CSS (End) ---------------------*/
 
 /*--------------------- Dark - Light mode (Start) ---------------------*/
@@ -1831,7 +1864,3 @@ footer .content p span{
 /*--------------------- 13- Scroll-Top (End) ---------------------*/
 
 /*--------------------- Portfolio-specific styles ----------------*/
-
-
-
-
