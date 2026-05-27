@@ -732,6 +732,7 @@ body.dark-mode .about .content h2{
     color: var(--textLight);
     line-height: 1.6;
     padding-bottom: 1rem;
+    text-transform: none;
 }
 
 body.dark-mode .about .content p {
@@ -773,6 +774,7 @@ body.dark-mode .about .content .about-info .info h4 {
     font-size: 1.6rem;
     font-weight: 400;
     color: var(--textLight);
+    text-transform: none;
 }
 
 body.dark-mode .about .content .about-info .info span{
@@ -1030,6 +1032,161 @@ body.dark-mode .experience-item p {
     color: var(--textDark);
 }
 /*--------------------- 6- Qualification Area CSS (End) ---------------------*/
+
+/*--------------------- Badges / Certificates Carousel (Start) ---------------------*/
+.badges-section {
+    grid-column: 1 / -1;
+    margin-top: 2.5rem;
+    width: 100%;
+}
+
+.badges-heading {
+    font-size: 2.2rem;
+    color: var(--textLight);
+    padding: 1rem 0 1.5rem;
+    text-align: left;
+}
+
+body.dark-mode .badges-heading {
+    color: var(--textDark);
+}
+
+.badge-carousel {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.badge-nav {
+    background: transparent;
+    border: 0.1rem solid rgba(0, 0, 0, 0.06);
+    color: var(--textLight);
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+body.dark-mode .badge-nav {
+    color: var(--textDark);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.badge-track {
+    display: flex;
+    gap: 1.2rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    flex: 1;
+    scroll-behavior: smooth;
+}
+
+.badge-item {
+    position: relative;
+    min-width: 18rem;
+    max-width: 18rem;
+    background: var(--opacityPlight);
+    border-radius: 1.2rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12);
+    scroll-snap-align: start;
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+body.dark-mode .badge-item {
+    background: var(--opacityPDark);
+}
+
+.badge-item:hover {
+    transform: translateY(-0.6rem);
+    box-shadow: 0 1.8rem 3rem rgba(0, 0, 0, 0.18);
+}
+
+.badge-media {
+    width: 100%;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.06));
+}
+
+.badge-img {
+    max-width: 80%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.badge-logo {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.6rem;
+    font-weight: 700;
+    font-size: 1rem;
+    z-index: 6;
+}
+
+.badge-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.6rem;
+    padding: 1.2rem;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.52));
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.22s ease;
+}
+
+.badge-item:focus .badge-overlay,
+.badge-item:hover .badge-overlay,
+.badge-item.active .badge-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.badge-name {
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.badge-issuer {
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .badge-item {
+        min-width: 14rem;
+        max-width: 14rem;
+    }
+
+    .badge-nav {
+        width: 3.6rem;
+        height: 3.6rem;
+    }
+
+    .badge-track {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .badge-track::-webkit-scrollbar {
+        display: none;
+    }
+}
+/*--------------------- Badges / Certificates Carousel (End) ---------------------*/
 
 
 

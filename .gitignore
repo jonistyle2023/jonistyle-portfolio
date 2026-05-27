@@ -1,2 +1,4 @@
 # Ignora los archivos relacionados a API key
 .env
+.idea
+.gitmodules
