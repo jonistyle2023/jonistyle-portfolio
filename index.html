@@ -35,8 +35,8 @@
         <a href="#about" data-i18n="nav.resume">Resume</a>
         <a href="#service" data-i18n="nav.service">Service</a>
         <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
-        <a href="#testimonial" data-i18n="nav.testimonial">Testimonial</a>
-        <a href="#blog" data-i18n="nav.blogs">Blogs</a>
+        <!-- <a href="#testimonial" data-i18n="nav.testimonial">Testimonial</a> -->
+        <!-- <a href="#blog" data-i18n="nav.blogs">Blogs</a> -->
         <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
 
@@ -112,7 +112,7 @@
         <div class="animation-circle">
 
             <div class="image">
-                <img src="assets/images/Home/Home-Image.webp" alt="Home-Image"/>
+                <img src="assets/images/Home/Home-Image.png" alt="Home-Image"/>
             </div>
 
             <div class="profile">
@@ -414,77 +414,244 @@
 
         <ul class="controls">
             <li class="button btn active" data-filter="all" data-i18n="port.filter.all">All</li>
-            <li class="button btn" data-filter="web" data-i18n="port.filter.web">Web Development</li>
-            <li class="button btn" data-filter="design" data-i18n="port.filter.backend">Backend / API</li>
-            <li class="button btn" data-filter="photography" data-i18n="port.filter.fullstack">Full-Stack Projects</li>
+            <li class="button btn" data-filter="video">Video Preview</li>
+            <li class="button btn" data-filter="scroll">Fake Scroll</li>
+            <li class="button btn" data-filter="motion">Image + Animation</li>
         </ul>
 
         <div class="box-container">
 
-            <div class="portfolio-item image web">
-                <img src="assets/images/Portfolio/portfolio-1.png" alt="Project-Screenshot"/>
-                <div class="content">
+            <article class="portfolio-item video" data-preview="video" data-video-src="assets/videos/wild-life-park-presentation.mp4">
+                <div class="project-shell">
+                    <div class="mockup-frame">
+                        <div class="mockup-browser">
+                            <div class="browser-controls" aria-hidden="true">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="browser-title">App Preview</span>
+                        </div>
+
+                        <div class="mockup-screen">
+                            <video class="project-video" muted loop playsinline preload="none" poster="assets/images/Portfolio/portfolio-1.png">
+                                <source src="" data-src="assets/videos/wild-life-park-presentation.mp4" type="video/mp4">
+                            </video>
+                            <img class="preview-poster" src="assets/images/Portfolio/portfolio-1.png" alt="WildLife Park preview"/>
+                            <span class="preview-chip">Video preview</span>
+                            <span class="preview-hint">Hover to play</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-meta">
+                    <span class="project-type">Web / Video Preview</span>
                     <h4>WildLife Park</h4>
-                    <p>Next JS, Node.js, MongoDB</p>
-                    <div class="links" style="display: flex; gap: 10px; margin-top: 10px;">
-                        <a href="https://github.com/jonistyle2023/WildLife-Park" target="_blank" class="view-btn" title="View Code"><i class="fab fa-github"></i></a>
-                        <a href="https://v0.app/chat/zoo-park-interface-jheZ1nEJjRy?ref=LNCVX0" target="_blank" class="view-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                    <p>Next.js, Node.js and MongoDB presented inside a realistic mockup for a high-end product feel.</p>
+                    <div class="project-tags">
+                        <span>Next.js</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/jonistyle2023/WildLife-Park" target="_blank" class="view-btn" title="View code"><i class="fab fa-github"></i></a>
+                        <a href="https://v0.app/chat/zoo-park-interface-jheZ1nEJjRy?ref=LNCVX0" target="_blank" class="view-btn" title="Live demo"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="portfolio-item image web">
-                <img src="assets/images/Portfolio/portfolio-2.png" alt="Project-Screenshot"/>
-                <div class="content">
+            <article class="portfolio-item video" data-preview="video" data-video-src="assets/videos/billing_system.mp4">
+                <div class="project-shell">
+                    <div class="mockup-frame">
+                        <div class="mockup-browser">
+                            <div class="browser-controls" aria-hidden="true">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="browser-title">App Preview</span>
+                        </div>
+
+                        <div class="mockup-screen">
+                            <video class="project-video" muted loop playsinline preload="none" poster="assets/images/Portfolio/portfolio-2.png">
+                                <source src="" data-src="assets/videos/billing_system.mp4" type="video/mp4">
+                            </video>
+                            <img class="preview-poster" src="assets/images/Portfolio/portfolio-2.png" alt="Online Store preview"/>
+                            <span class="preview-chip">Video preview</span>
+                            <span class="preview-hint">Hover to play</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-meta">
+                    <span class="project-type">Web / Video Preview</span>
                     <h4>Online Store</h4>
-                    <p>HTML, CSS & JavaScript</p>
-                    <div class="links" style="display: flex; gap: 10px; margin-top: 10px;">
-                        <a href="https://github.com/jonistyle2023/Online-Store-Basic" target="_blank" class="view-btn" title="View Code"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank" class="view-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                    <p>A clean storefront concept with preview playback only on hover to keep performance focused.</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/jonistyle2023/Online-Store-Basic" target="_blank" class="view-btn" title="View code"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" class="view-btn" title="Live demo"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="portfolio-item image design">
-                <img src="assets/images/Portfolio/portfolio-3.png" alt="API Architecture"/>
-                <div class="content">
+            <article class="portfolio-item scroll" data-preview="scroll" data-scroll-distance="46">
+                <div class="project-shell">
+                    <div class="mockup-frame">
+                        <div class="mockup-browser">
+                            <div class="browser-controls" aria-hidden="true">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="browser-title">Scrollable App Preview</span>
+                        </div>
+
+                        <div class="mockup-screen">
+                            <div class="scroll-stage">
+                                <img class="scroll-image" src="assets/images/Portfolio/portfolio-3.png" alt="Holidays CRUD fake scroll preview"/>
+                            </div>
+                            <span class="preview-chip">Fake scroll</span>
+                            <span class="preview-hint">Hover to browse</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-meta">
+                    <span class="project-type">API / Fake Scroll</span>
                     <h4>Holidays CRUD</h4>
-                    <p>Helidon SE, JSON-B, Docker</p>
-                    <div class="links" style="display: flex; gap: 10px; margin-top: 10px;">
-                        <a href="https://github.com/jonistyle2023/holidays-CRUD" target="_blank" class="view-btn" title="View Code"><i class="fab fa-github"></i></a>
+                    <p>A long-form preview that simulates navigating through the app without using heavy video files.</p>
+                    <div class="project-tags">
+                        <span>Helidon SE</span>
+                        <span>JSON-B</span>
+                        <span>Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/jonistyle2023/holidays-CRUD" target="_blank" class="view-btn" title="View code"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="portfolio-item image design">
-                <img src="assets/images/Portfolio/portfolio-4.png" alt="Database Schema"/>
-                <div class="content">
+            <article class="portfolio-item scroll" data-preview="scroll" data-scroll-distance="52">
+                <div class="project-shell">
+                    <div class="mockup-frame">
+                        <div class="mockup-browser">
+                            <div class="browser-controls" aria-hidden="true">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="browser-title">Scrollable App Preview</span>
+                        </div>
+
+                        <div class="mockup-screen">
+                            <div class="scroll-stage">
+                                <img class="scroll-image" src="assets/images/Portfolio/portfolio-4.png" alt="Web Inventory fake scroll preview"/>
+                            </div>
+                            <span class="preview-chip">Fake scroll</span>
+                            <span class="preview-hint">Hover to browse</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-meta">
+                    <span class="project-type">Backend / Fake Scroll</span>
                     <h4>Web Inventory</h4>
-                    <p>SpringBoot, Java & MySQL</p>
-                    <div class="links" style="display: flex; gap: 10px; margin-top: 10px;">
-                         <a href="https://github.com/jonistyle2023/APIRESTfull" target="_blank" class="view-btn" title="View Code"><i class="fab fa-github"></i></a>
+                    <p>Structured like a mobile-first product walkthrough, ideal for showcasing app depth at a glance.</p>
+                    <div class="project-tags">
+                        <span>Spring Boot</span>
+                        <span>Java</span>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/jonistyle2023/APIRESTfull" target="_blank" class="view-btn" title="View code"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
-            </div>
-            <div class="portfolio-item image photography">
-                <img src="assets/images/Portfolio/portfolio-5.png" alt="Portfolio-Image"/>
-                <div class="content">
-                    <h4>AsistApp</h4>
-                    <p>React, MySQL, Django</p>
-                    <a data-effect="mfp-newspaper" href="assets/images/Portfolio/portfolio-5.png" class="view-btn"><i
-                            class="fas fa-search-plus"></i></a>
-                </div>
-            </div>
+            </article>
 
-            <div class="portfolio-item image photography">
-                <img src="assets/images/Portfolio/portfolio-6.png" alt="Portfolio-Image"/>
-                <div class="content">
-                    <h4>SIPeIP</h4>
-                    <p>React, Tailwind CSS, MySQL, Django</p>
-                    <a data-effect="mfp-newspaper" href="assets/images/Portfolio/portfolio-6.png" class="view-btn"><i
-                            class="fas fa-search-plus"></i></a>
+            <article class="portfolio-item motion" data-preview="motion">
+                <div class="project-shell">
+                    <div class="mockup-frame">
+                        <div class="mockup-browser">
+                            <div class="browser-controls" aria-hidden="true">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="browser-title">Animated Preview</span>
+                        </div>
+
+                        <div class="mockup-screen">
+                            <div class="animated-stage">
+                                <img class="animated-image" src="assets/images/Portfolio/portfolio-5.png" alt="AsistApp animated preview"/>
+                                <div class="animated-glow"></div>
+                                <span class="motion-badge motion-badge--top">GSAP motion</span>
+                                <span class="motion-badge motion-badge--bottom">Hover to lift</span>
+                            </div>
+                            <span class="preview-chip">Image + animation</span>
+                            <span class="preview-hint">Micro interaction</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
+
+                <div class="project-meta">
+                    <span class="project-type">UX / Image + Animation</span>
+                    <h4>AsistApp</h4>
+                    <p>Static image with motion polish, floating labels and subtle depth to keep the section lightweight.</p>
+                    <div class="project-tags">
+                        <span>React</span>
+                        <span>MySQL</span>
+                        <span>Django</span>
+                    </div>
+                    <div class="project-links">
+                        <a data-popup="image" data-effect="mfp-newspaper" href="assets/images/Portfolio/portfolio-5.png" class="view-btn" title="Open preview"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="portfolio-item motion" data-preview="motion">
+                <div class="project-shell">
+                    <div class="mockup-frame">
+                        <div class="mockup-browser">
+                            <div class="browser-controls" aria-hidden="true">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="browser-title">Animated Preview</span>
+                        </div>
+
+                        <div class="mockup-screen">
+                            <div class="animated-stage">
+                                <img class="animated-image" src="assets/images/Portfolio/portfolio-6.png" alt="SIPeIP animated preview"/>
+                                <div class="animated-glow"></div>
+                                <span class="motion-badge motion-badge--top">GSAP motion</span>
+                                <span class="motion-badge motion-badge--bottom">Hover to lift</span>
+                            </div>
+                            <span class="preview-chip">Image + animation</span>
+                            <span class="preview-hint">Micro interaction</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-meta">
+                    <span class="project-type">UX / Image + Animation</span>
+                    <h4>SIPeIP</h4>
+                    <p>Elegant static showcase with layered motion cues to communicate polish and visual hierarchy.</p>
+                    <div class="project-tags">
+                        <span>React</span>
+                        <span>Tailwind</span>
+                        <span>Django</span>
+                    </div>
+                    <div class="project-links">
+                        <a data-popup="image" data-effect="mfp-newspaper" href="assets/images/Portfolio/portfolio-6.png" class="view-btn" title="Open preview"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+            </article>
 
         </div>
 
@@ -493,7 +660,7 @@
 </section>
 <!-------------------- Portfolio Area (End) -------------------->
 
-<!-------------------- Testimonials Area (Start) -------------------->
+<!-- ========== TESTIMONIALS SECTION HIDDEN FOR FUTURE USE
 <section class="testimonial" id="testimonial">
 
     <div class="heading">
@@ -599,9 +766,11 @@
 
     </div>
 </section>
-<!-------------------- Testimonials Area (End) -------------------->
 
-<!-------------------- Blog Area (Start) -------------------->
+ END TESTIMONIALS SECTION ========== -->
+
+
+<!-- ========== BLOGS SECTION HIDDEN FOR FUTURE USE ==========
 <section class="blog" id="blog">
 
     <div class="heading">
@@ -701,7 +870,7 @@
     </div>
 
 </section>
-<!-------------------- Blog Area (End) -------------------->
+ END BLOGS SECTION ========== -->
 
 <!-------------------- Contact Area (Start) -------------------->
 <section class="contact" id="contact">

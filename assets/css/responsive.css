@@ -253,6 +253,26 @@
         min-height: 200px;
         padding: 2rem 1rem;
     }
+
+    .portfolio .box-container{
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-item{
+        min-height: auto;
+    }
+
+    .mockup-screen{
+        height: 22rem;
+    }
+
+    .preview-hint{
+        display: none;
+    }
+
+    .project-meta{
+        padding: 1.3rem 1.3rem 1.6rem;
+    }
 }
 
 /*--------------------- Responsive backgrounds (testimonials) ---------------------*/
