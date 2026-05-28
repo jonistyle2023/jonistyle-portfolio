@@ -1054,55 +1054,38 @@ body.dark-mode .badges-heading {
 .badge-carousel {
     display: flex;
     align-items: center;
-    gap: 1rem;
-}
-
-.badge-nav {
-    background: transparent;
-    border: 0.1rem solid rgba(0, 0, 0, 0.06);
-    color: var(--textLight);
-    width: 4.4rem;
-    height: 4.4rem;
-    border-radius: 0.6rem;
-    cursor: pointer;
-    font-size: 1.6rem;
-}
-
-body.dark-mode .badge-nav {
-    color: var(--textDark);
-    border-color: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
 }
 
 .badge-track {
     display: flex;
     gap: 1.2rem;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    flex: 1;
-    scroll-behavior: smooth;
+    width: max-content;
+    will-change: transform;
+    animation: badge-marquee 28s linear infinite;
+    animation-duration: var(--badge-marquee-duration, 28s);
+    pointer-events: none;
+    user-select: none;
 }
 
 .badge-item {
     position: relative;
     min-width: 18rem;
     max-width: 18rem;
+    flex: 0 0 auto;
     background: var(--opacityPlight);
     border-radius: 1.2rem;
     overflow: hidden;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12);
-    scroll-snap-align: start;
-    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    transition: box-shadow 0.28s ease;
 }
 
 body.dark-mode .badge-item {
     background: var(--opacityPDark);
 }
 
-.badge-item:hover {
-    transform: translateY(-0.6rem);
-    box-shadow: 0 1.8rem 3rem rgba(0, 0, 0, 0.18);
+.badge-track.is-paused {
+    animation-play-state: paused;
 }
 
 .badge-media {
@@ -1121,69 +1104,24 @@ body.dark-mode .badge-item {
     display: block;
 }
 
-.badge-logo {
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
-    background: rgba(255, 255, 255, 0.06);
-    padding: 0.4rem 0.6rem;
-    border-radius: 0.6rem;
-    font-weight: 700;
-    font-size: 1rem;
-    z-index: 6;
-}
-
-.badge-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 0.6rem;
-    padding: 1.2rem;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.52));
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.22s ease;
-}
-
-.badge-item:focus .badge-overlay,
-.badge-item:hover .badge-overlay,
-.badge-item.active .badge-overlay {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.badge-name {
-    color: #fff;
-    font-size: 1.4rem;
-    margin: 0;
-}
-
-.badge-issuer {
-    color: rgba(255, 255, 255, 0.85);
-    margin: 0;
-    font-size: 1rem;
-}
-
 @media (max-width: 768px) {
     .badge-item {
         min-width: 14rem;
         max-width: 14rem;
     }
 
-    .badge-nav {
-        width: 3.6rem;
-        height: 3.6rem;
-    }
-
     .badge-track {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
+        gap: 1rem;
+        animation-duration: 20s;
     }
+}
 
-    .badge-track::-webkit-scrollbar {
-        display: none;
+@keyframes badge-marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-1 * var(--badge-loop-distance, 0px)));
     }
 }
 /*--------------------- Badges / Certificates Carousel (End) ---------------------*/
