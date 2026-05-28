@@ -1036,12 +1036,12 @@
             </div>
         </div>
 
-        <form method="post" class="contact-form" id="contactUs-Form" action="assets/php/submit.php">
-
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactUs-Form">
+            <input type="hidden" name="access_key" value="4e9bb5cc-b607-4bb6-8a92-73af70a5d7f0">
             <input type="text" name="name" class="box" id="name" data-i18n="contact.placeholder.name" placeholder="name" required/>
             <input type="email" name="email" class="box" id="email" data-i18n="contact.placeholder.email" placeholder="email" required/>
             <input type="text" name="subject" class="box" id="subject" data-i18n="contact.placeholder.subject" placeholder="subject" required/>
-            <textarea cols="30" rows="10" name="comment" id="comment" class="box" data-i18n="contact.placeholder.message" placeholder="message"></textarea>
+            <textarea cols="30" rows="10" name="message" id="comment" class="box" data-i18n="contact.placeholder.message" placeholder="message" required></textarea>
             <button type="submit" class="btn" name="submit" id="submit" data-i18n="contact.submit">Send message</button>
 
             <span class="alert" id="msg"></span>
@@ -1209,22 +1209,40 @@
 
 <!-- Contact-Form Script -->
 <script>
-    jQuery('#contactUs-Form').on('submit', function (e) {
-        jQuery('#msg').html('');
-        jQuery('#submit').html('Please wait');
-        jQuery('#submit').attr('disabled', true);
-        jQuery.ajax({
-            url: 'assets/php/submit.php',
-            type: 'post',
-            data: jQuery('#contactUs-Form').serialize(),
-            success: function (result) {
-                jQuery('#msg').html(result);
-                jQuery('#submit').html('Submit');
-                jQuery('#submit').attr('disabled', false);
-                jQuery('#contactUs-Form')[0].reset();
-            }
-        });
+    const form = document.getElementById('contactUs-Form');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
+
+        const formData = new FormData(form);
+
+        const originalText = submitBtn.textContent;
+
+        submitBtn.textContent = "Sending...";
+        submitBtn.disabled = true;
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                alert("Success! Your message has been sent.");
+                form.reset();
+            } else {
+                alert("Error: " + data.message);
+            }
+
+        } catch (error) {
+            alert("Something went wrong. Please try again.");
+        } finally {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }
     });
 </script>
 
