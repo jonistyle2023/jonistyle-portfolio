@@ -355,55 +355,55 @@
                 <div class="badge-track">
                     <div class="badge-item">
                         <div class="badge-media">
-                            <img class="badge-img badge-clickable" src="assets/images/badgets/aws-certified-cloud-practitioner.png" alt="Certificate badge" role="button" tabindex="0"/>
+                            <img class="badge-img" src="assets/images/badgets/aws-certified-cloud-practitioner.png" alt="AWS Certified Cloud Practitioner" draggable="false"/>
                         </div>
                     </div>
 
                     <div class="badge-item">
                         <div class="badge-media">
-                            <img class="badge-img badge-clickable" src="assets/images/badgets/aws-cloud-quest-cloud-practitioner-training-badge.png" alt="Certificate badge" role="button" tabindex="0"/>
+                            <img class="badge-img" src="assets/images/badgets/aws-cloud-quest-cloud-practitioner-training-badge.png" alt="AWS Cloud Quest Cloud Practitioner" draggable="false"/>
                         </div>
                     </div>
 
                     <div class="badge-item">
                         <div class="badge-media">
-                            <img class="badge-img badge-clickable" src="assets/images/badgets/aws-academy-graduate-cloud-security-foundations-tra.png" alt="Certificate badge" role="button" tabindex="0"/>
+                            <img class="badge-img" src="assets/images/badgets/aws-academy-graduate-cloud-security-foundations-tra.png" alt="AWS Academy Cloud Security Foundations" draggable="false"/>
                         </div>
                     </div>
 
                     <div class="badge-item">
                         <div class="badge-media">
-                            <img class="badge-img badge-clickable" src="assets/images/badgets/aws-academy-graduate-cloud-foundations-training-bad.png" alt="Certificate badge" role="button" tabindex="0"/>
+                            <img class="badge-img" src="assets/images/badgets/aws-academy-graduate-cloud-foundations-training-bad.png" alt="AWS Academy Cloud Foundations" draggable="false"/>
                         </div>
                     </div>
 
                     <div class="badge-item">
                         <div class="badge-media">
-                            <img class="badge-img badge-clickable" src="assets/images/badgets/aws-academy-graduate-generative-ai-foundations-trai.png" alt="Certificate badge" role="button" tabindex="0"/>
+                            <img class="badge-img" src="assets/images/badgets/aws-academy-graduate-generative-ai-foundations-trai.png" alt="AWS Academy Generative AI Foundations" draggable="false"/>
                         </div>
                     </div>
 
                     <div class="badge-item">
                         <div class="badge-media">
-                            <img class="badge-img badge-clickable" src="assets/images/badgets/network-addressing-and-basic-troubleshooting.png" alt="Certificate badge" role="button" tabindex="0"/>
+                            <img class="badge-img" src="assets/images/badgets/network-addressing-and-basic-troubleshooting.png" alt="Network Addressing and Basic Troubleshooting" draggable="false"/>
                         </div>
                     </div>
 
                     <div class="badge-item">
                         <div class="badge-media">
-                            <img class="badge-img badge-clickable" src="assets/images/badgets/python-essentials-1.1.png" alt="Certificate badge" role="button" tabindex="0"/>
+                            <img class="badge-img" src="assets/images/badgets/python-essentials-1.1.png" alt="Python Essentials" draggable="false"/>
                         </div>
                     </div>
 
                     <div class="badge-item">
                         <div class="badge-media">
-                            <img class="badge-img badge-clickable" src="assets/images/badgets/networking-basics.png" alt="Certificate badge" role="button" tabindex="0"/>
+                            <img class="badge-img" src="assets/images/badgets/networking-basics.png" alt="Networking Basics" draggable="false"/>
                         </div>
                     </div>
 
                     <div class="badge-item">
                         <div class="badge-media">
-                            <img class="badge-img badge-clickable" src="assets/images/badgets/introduction-to-cybersecurity.png" alt="Certificate badge" role="button" tabindex="0"/>
+                            <img class="badge-img" src="assets/images/badgets/introduction-to-cybersecurity.png" alt="Introduction to Cybersecurity" draggable="false"/>
                         </div>
                     </div>
                 </div>
@@ -1016,14 +1016,6 @@
 </footer>
 <!-------------------- Footer Area (End) -------------------->
 
-<!-- Badge Modal -->
-<div id="badgeModal" class="badge-modal">
-    <div class="badge-modal-content">
-        <button class="badge-modal-close" aria-label="Close">&times;</button>
-        <img id="badgeModalImage" src="" alt="Certificate badge" class="badge-modal-image"/>
-    </div>
-</div>
-
 <!-- JQuery -->
 <script src="assets/vendors/jquery/jquery-3.6.0.js"></script>
 
@@ -1112,40 +1104,20 @@
         });
     }
 
-    // Inicializa particlesJS al cargar la página
     initParticles();
 
-    // Escucha cambios de tema
     document.getElementById('switch').addEventListener('click', () => {
-        // Reinicia particlesJS con el nuevo tema
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
         initParticles();
     });
-</script>
 
-<!---------------- Custom Script ---------------->
-
-
-<!-- dark-light mode Script -->
-<script>
-    // Selecciona el botón de cambio de tema
-    document.getElementById('switch').addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode'); // Añade o quita la clase 'dark-mode'
-
-        // Guardar la preferencia del usuario en localStorage
-        if (document.body.classList.contains('dark-mode')) {
-            localStorage.setItem('theme', 'dark');
-        } else {
-            localStorage.setItem('theme', 'light');
-        }
-    });
-
-    // Comprobar la preferencia al cargar la página
     window.addEventListener('load', () => {
         if (localStorage.getItem('theme') === 'dark') {
             document.body.classList.add('dark-mode');
+            initParticles();
         }
     });
-
 </script>
 
 <!-- Typed Script -->
@@ -1240,5 +1212,6 @@
     // Inicializar el idioma al cargar la página
     setLanguage(currentLang);
 </script>
+
 </body>
 </html>

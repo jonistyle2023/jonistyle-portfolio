@@ -1,28 +1,66 @@
 /*--------------------- Responsive (Start) ---------------------*/
-@media (max-width: 991px){
-    html{
+
+/* Sidebar: ocultar en tablets y móviles */
+@media (max-width: 1024px) {
+    #sidebar {
+        display: none;
+    }
+}
+
+/* Reducir font-base en tablets */
+@media (max-width: 991px) {
+    html {
         font-size: 55%;
     }
 }
 
-@media (max-width: 768px){
-    header .button-dark {
-        padding-left: 400px;
+/* ≤800px: ocultar elementos decorativos, ajustar fondos */
+@media (max-width: 800px) {
+    .scrolldown {
+        display: none;
     }
-    header #menu-btn{
+
+    .cursor,
+    .cursor-two {
+        display: none;
+    }
+
+    .about,
+    .qualification,
+    .service,
+    .portfolio,
+    .testimonial,
+    .blog,
+    .contact {
+        background-size: contain;
+        background-position: center top;
+        background-repeat: repeat;
+        min-height: 250px;
+        padding: 3rem 1.5rem;
+    }
+}
+
+/* ≤768px: menú móvil */
+@media (max-width: 768px) {
+    section,
+    header {
+        padding: 2rem;
+    }
+
+    header #menu-btn {
         display: block;
     }
 
-    body.dark-mode header #menu-btn{
+    body.dark-mode header #menu-btn {
         color: var(--textDark);
     }
 
-    .header .navbar{
+    .header .navbar {
         width: 30rem;
         position: absolute;
         right: 0;
-        top:100%;
-        padding: 0rem 2rem;
+        top: 100%;
+        padding: 0 2rem;
         background: #F7F5F2;
         border: 0.1rem solid #089D66;
         -webkit-transition: 0.2s linear;
@@ -37,91 +75,101 @@
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     }
 
-    body.dark-mode .header .navbar{
+    body.dark-mode .header .navbar {
         background: var(--backgroundDark);
         border: 0.1rem solid var(--primaryDark);
     }
 
-    .header .navbar.active{
+    .header .navbar.active {
         -webkit-transform: translateX(0);
         transform: translateX(0);
     }
 
-    .header .navbar a{
+    .header .navbar a {
         display: flex;
         justify-content: center;
-        color: #000000;
+        color: var(--textLight);
         padding: 1.5rem 0;
         margin: 1rem 0;
     }
 
-    .navbar::-webkit-scrollbar{
+    body.dark-mode .header .navbar a {
+        color: var(--textDark);
+    }
+
+    .navbar::-webkit-scrollbar {
         width: 0.8rem;
     }
 
-    .navbar::-webkit-scrollbar-thumb{
+    .navbar::-webkit-scrollbar-thumb {
         border-radius: 1rem;
         background-color: #089D66;
     }
 
-    .navbar::-webkit-scrollbar-track{
+    .navbar::-webkit-scrollbar-track {
         background: transparent;
     }
 
-    section, header{
-        padding: 2rem;
+    footer {
+        padding: 2rem 1.5rem;
     }
 
+    footer .social {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
 }
 
-@media (max-width: 450px){
-    html{
+/* ≤480px: móviles pequeños */
+@media (max-width: 480px) {
+    html {
         font-size: 50%;
     }
 
-    section, header{
+    section,
+    header {
         padding: 1rem;
     }
 
+    /* Fondos de secciones */
+    .about,
+    .qualification,
+    .service,
+    .testimonial,
+    .blog,
+    .contact {
+        background-size: 100% auto;
+        min-height: 200px;
+        padding: 2rem 1rem;
+    }
 
+    .portfolio {
+        background-size: 100% auto;
+        min-height: 200px;
+        padding: 2rem 1rem;
+    }
 
-}
+    .portfolio .box-container {
+        grid-template-columns: 1fr;
+    }
 
-@media (max-width: 1024px) {
-    #sidebar {
+    .portfolio-item {
+        min-height: auto;
+    }
+
+    .mockup-screen {
+        height: 22rem;
+    }
+
+    .preview-hint {
         display: none;
     }
-}
 
-@media (max-width: 900px) {
-    #sidebar {
-        display: none;
+    .project-meta {
+        padding: 1.3rem 1.3rem 1.6rem;
     }
-}
 
-@media (max-width: 768px) {
-    #sidebar {
-        display: none;
-    }
-}
-
-@media (max-width: 812px) {
-    #sidebar {
-        display: none;
-    }
-}
-
-@media (max-width: 400px) {
-    #sidebar {
-        display: none;
-    }
-}
-/*---------------  RESPONSIVE STYLES  ---------------*/
-
-@media (max-width: 480px) {
-    header .button-dark {
-        padding-left: 100px;
-    }
+    /* Animación del círculo */
     .profile {
         position: initial;
         top: -50px;
@@ -132,7 +180,7 @@
         width: 350px;
         height: 350px;
         margin-left: -8rem;
-        margin-top: .1rem;
+        margin-top: 0.1rem;
     }
 
     .circle {
@@ -151,217 +199,18 @@
         left: 1rem;
         height: 5.5rem;
     }
-}
-/*---------------  CIRCLE ANIMATION (END)  ---------------*/
 
-/*---------------  Profile Photo(Start)  ---------------*/
-/* Responsive Styles */
-
-@media (max-width: 480px) {
+    /* Foto de perfil en Home */
     .home .image img {
         height: 350px;
         width: 350px;
-        margin: -5rem -5rem -5rem -8rem;
+        margin: -10rem -5rem -5rem 5.8rem;
         top: 11rem;
     }
+
+    footer {
+        padding: 2rem 1rem;
+    }
 }
-/*---------------  Profile Photo (End) ---------------*/
+
 /*--------------------- Responsive (End) ---------------------*/
-
-/*--------------------- Responsive backgrounds (resume) ---------------------*/
-
-@media (max-width: 800px) {
-    .about {
-        background-size: contain;
-        background-position: center top;
-        background-repeat: repeat;
-        min-height: 250px;
-        padding: 3rem 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .about {
-        background-size: 100% auto;
-        background-position: center top;
-        background-repeat: repeat;
-        min-height: 200px;
-        padding: 2rem 1rem;
-    }
-}
-
-/*--------------------- Responsive backgrounds (qualifications) ---------------------*/
-@media (max-width: 800px) {
-    .qualification {
-        background-size: contain;
-        background-position: center top;
-        background-repeat: repeat;
-        min-height: 250px;
-        padding: 3rem 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .qualification {
-        background-size: 100% auto;
-        background-position: center top;
-        background-repeat: repeat;
-        min-height: 200px;
-        padding: 2rem 1rem;
-    }
-}
-
-/*--------------------- Responsive backgrounds (services) ---------------------*/
-
-@media (max-width: 800px) {
-    .service {
-        background-size: contain;
-        background-position: center top;
-        background-repeat: repeat;
-        min-height: 250px;
-        padding: 3rem 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .service {
-        background-size: 100% auto;
-        background-position: center top;
-        background-repeat: repeat;
-        min-height: 200px;
-        padding: 2rem 1rem;
-    }
-}
-
-/*--------------------- Responsive backgrounds (portfolio) ---------------------*/
-
-@media (max-width: 800px) {
-    .portfolio {
-        background-size: contain;
-        background-position: center top;
-        background-repeat: repeat;
-        min-height: 250px;
-        padding: 3rem 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .portfolio {
-        background-size: 100% auto;
-        background-position: center top;
-        background-repeat: repeat;
-        min-height: 200px;
-        padding: 2rem 1rem;
-    }
-
-    .portfolio .box-container{
-        grid-template-columns: 1fr;
-    }
-
-    .portfolio-item{
-        min-height: auto;
-    }
-
-    .mockup-screen{
-        height: 22rem;
-    }
-
-    .preview-hint{
-        display: none;
-    }
-
-    .project-meta{
-        padding: 1.3rem 1.3rem 1.6rem;
-    }
-}
-
-/*--------------------- Responsive backgrounds (testimonials) ---------------------*/
-
-@media (max-width: 800px) {
-    .testimonial {
-        background-size: contain;
-        background-position: center top;
-        background-repeat: repeat;
-        min-height: 250px;
-        padding: 3rem 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .testimonial {
-        background-size: 100% auto;
-        background-position: center top;
-        background-repeat: repeat;
-        min-height: 200px;
-        padding: 2rem 1rem;
-    }
-}
-
-/*--------------------- Responsive backgrounds (blogs) ---------------------*/
-
-@media (max-width: 800px) {
-    .blog {
-        background-size: contain;
-        background-position: center top;
-        background-repeat: repeat;
-        min-height: 250px;
-        padding: 3rem 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .blog {
-        background-size: 100% auto;
-        background-position: center top;
-        background-repeat: repeat;
-        min-height: 200px;
-        padding: 2rem 1rem;
-    }
-}
-
-/*--------------------- Responsive backgrounds (contact) ---------------------*/
-
-@media (max-width: 800px) {
-    .contact{
-        background-size: contain;
-        background-position: center top;
-        background-repeat: repeat;
-        min-height: 250px;
-        padding: 3rem 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .contact {
-        background-size: 100% auto;
-        background-position: center top;
-        background-repeat: repeat;
-        min-height: 200px;
-        padding: 2rem 1rem;
-    }
-}
-
-@media (max-width: 800px) {
-    .scrolldown {
-        display: none;
-    }
-}
-
-@media (max-width: 480px) {
-    .scrolldown {
-        display: none;
-    }
-}
-
-@media (max-width: 800px) {
-    .cursor-two {
-        display: none;
-    }
-}
-
-@media (max-width: 480px) {
-    .cursor {
-        display: none;
-    }
-}
-

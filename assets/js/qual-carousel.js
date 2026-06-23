@@ -40,14 +40,45 @@
         }
     }
 
+    // Wait until images inside the track are loaded before measuring
+    function waitForImagesLoaded(cb) {
+        const imgs = track.querySelectorAll('img');
+        if (!imgs || imgs.length === 0) return cb();
+        let remaining = imgs.length;
+        imgs.forEach(img => {
+            if (img.complete) {
+                remaining -= 1;
+            } else {
+                img.addEventListener('load', () => {
+                    remaining -= 1;
+                    if (remaining === 0) cb();
+                }, { once: true });
+                img.addEventListener('error', () => {
+                    // treat error as loaded to avoid blocking
+                    remaining -= 1;
+                    if (remaining === 0) cb();
+                }, { once: true });
+            }
+        });
+        if (remaining === 0) cb();
+    }
+
     if (!prefersReducedMotion) {
-        applyLoopDistance();
+        waitForImagesLoaded(() => {
+            // ensure layout settled
+            requestAnimationFrame(() => {
+                applyLoopDistance();
+            });
+        });
     } else {
         track.classList.add('is-paused');
     }
 
     window.addEventListener('resize', () => {
-        applyLoopDistance();
+        waitForImagesLoaded(() => {
+            // debounce a touch by using rAF
+            requestAnimationFrame(() => applyLoopDistance());
+        });
     });
 })();
 
